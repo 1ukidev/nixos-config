@@ -1,0 +1,64 @@
+Installation process:
+**this is not a definitive guide**
+
+1 - Enter sudo
+sudo -i
+
+2 - Layout BR
+loadkeys br-abtn2
+
+3 - Enable WiFi if necessary
+ifconfig wlo1 up
+iwlist wlo1 scan | grep ESSID
+wpa_passphrase RMM criatividade0 | tee /etc/wpa_supplicant.conf
+wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant.conf
+
+4 - Partition disk
+fdisk -l /dev/sda
+cfdisk -z /dev/sda
+mkfs.fat -F 32 /dev/sda2 && fatlabel /dev/sda2 BOOT
+mkfs.btrfs -f -L ROOT /dev/sda3
+mkswap -L SWAP /dev/sda1
+
+5 - Mount partitions
+swapon /dev/sda2
+mount -t btrfs /dev/sda1 /mnt/
+btrfs subvolume create /mnt/nixos
+umount /mnt/
+mount -t btrfs -o subvol=nixos /dev/sda1 /mnt/
+btrfs subvolume create /mnt/var
+btrfs subvolume create /mnt/home
+btrfs subvolume create /mnt/tmp
+mkdir -p /mnt/boot/efi
+mount /dev/sda3 /mnt/boot/efi
+
+6 - Generate config
+nixos-generate-config --root /mnt/
+
+7 - Download my configuration
+curl -L -O https://github.com/1ukidev/nixos/archive/main.tar.gz
+tar -zxvf main.tar.gz
+cd nixos-main
+cp configuration.nix /mnt/etc/nixos/configuration.nix
+
+8 - End
+cd /mnt/etc/nixos
+time nixos-install -j 4
+reboot
+
+After reboot:
+
+1 - Put password on user
+*CTRL+ALT+F2*
+*Enter as root*
+passwd luki
+reboot
+
+2 - Post-installation
+*Login*
+*Enter terminal*
+git clone https://github.com/1ukidev/nixos
+cd nixos
+./pos-install.sh
+
+The rest is history...
