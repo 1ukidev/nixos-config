@@ -9,16 +9,15 @@ loadkeys br-abtn2
 
 3 - Enable WiFi if necessary
 ifconfig wlo1 up
-iwlist wlo1 scan | grep ESSID
-wpa_passphrase RMM criatividade0 | tee /etc/wpa_supplicant.conf
+wpa_passphrase <ssid> <passphrase> >> /etc/wpa_supplicant.conf
 wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant.conf
 
 4 - Partition disk
 fdisk -l /dev/sda
 cfdisk -z /dev/sda
-mkfs.fat -F 32 /dev/sda2 && fatlabel /dev/sda2 BOOT
-mkfs.btrfs -f -L ROOT /dev/sda3
-mkswap -L SWAP /dev/sda1
+mkfs.fat -F 32 /dev/sda3 && fatlabel /dev/sda3 BOOT
+mkfs.btrfs -f -L ROOT /dev/sda1
+mkswap -L SWAP /dev/sda2
 
 5 - Mount partitions
 swapon /dev/sda2
@@ -36,13 +35,12 @@ mount /dev/sda3 /mnt/boot/efi
 nixos-generate-config --root /mnt/
 
 7 - Download my configuration
-curl -L -O https://github.com/1ukidev/nixos/archive/main.tar.gz
-tar -zxvf main.tar.gz
-cd nixos-main
+curl -L -O https://github.com/1ukidev/nixos-config/archive/main.tar.gz
+tar zxf main.tar.gz
+cd nixos-config-main
 cp configuration.nix /mnt/etc/nixos/configuration.nix
 
 8 - End
-cd /mnt/etc/nixos
 time nixos-install -j 4
 reboot
 
@@ -57,8 +55,8 @@ reboot
 2 - Post-installation
 *Login*
 *Enter terminal*
-git clone https://github.com/1ukidev/nixos
+git clone https://github.com/1ukidev/nixos-config
 cd nixos
-./pos-install.sh
+sh pos-install.sh
 
 The rest is history...
