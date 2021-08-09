@@ -2,7 +2,7 @@
 
 { config, pkgs, lib, ... }:
 
-# Variable to install unstable packages.
+# Easy way to install unstable packages.
 let
   unstable = import (builtins.fetchTarball
     "https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable") {
@@ -131,11 +131,11 @@ in
   # Update Intel microcode.
   hardware.cpu.intel.updateMicrocode = true;
 
-  # Enable CUPS and HP driver to print documents.
+  # Enable print support.
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [ hplip ];
+  services.printing.drivers = with pkgs; [ epson-escpr2 ];
   hardware.sane.enable = false;
-  hardware.sane.extraBackends = with pkgs; [ hplipWithPlugin ];
+  hardware.sane.extraBackends = [ pkgs.epkowa ];
 
   # Enable Bluetooth.
   hardware.bluetooth.enable = true;
@@ -343,7 +343,7 @@ in
     scrcpy
     sct
     teamviewer
-    betterdiscord-installer
+    unstable.betterdiscordctl
     winetricks
     wineWowPackages.full
     wirelesstools
@@ -379,9 +379,10 @@ in
 
     # Games
     chiaki
+    pcsx2
     ppsspp
     snes9x-gtk
-    unstable.osu-lazer
+    # unstable.osu-lazer
 
     # Text
     libreoffice-fresh
@@ -404,9 +405,12 @@ in
 
     # Libs
     glibc
-    libsForQt5.qtstyleplugins
-    llvm_12
+    libopus
     libsForQt5.full
+    libsForQt5.qtstyleplugins
+    libvorbis
+    libvpx
+    llvm_12
     python39Packages.pygame
     x264
     x265
