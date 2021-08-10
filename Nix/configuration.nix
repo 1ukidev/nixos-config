@@ -19,7 +19,7 @@ in
   # Enable unfree packages.
   nixpkgs.config.allowUnfree = true;
 
-  # Allow user on nix.
+  # Allow "wheel" on nix.
   nix.allowedUsers = [ "@wheel" ];
   nix.trustedUsers = [ "@wheel" ];
 
@@ -35,14 +35,21 @@ in
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 
   # Use GRUB 2 bootloader.
-  boot.loader.efi.canTouchEfiVariables = false;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.efiInstallAsRemovable = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
-  boot.loader.grub.device = "nodev";
-  boot.loader.timeout = 1;
+  boot.loader = {
+    timeout = 1;
+    efi = {
+      canTouchEfiVariables = false;
+      efiSysMountPoint = "/boot/efi";
+    };
+    
+    grub = {
+      enable = true;
+      version = 2;
+      efiSupport = true;
+      efiInstallAsRemovable = true;
+      device = "nodev";
+    };
+  };
 
   networking.hostName = "LuKi-PC"; # Define your hostname.
   networking.wireless.enable = false; # Enables wireless support via wpa_supplicant.
