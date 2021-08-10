@@ -359,6 +359,7 @@ in
     btrfsProgs
     cmatrix
     compsize
+    cpufetch
     drive
     elinks
     figlet
