@@ -3,10 +3,6 @@
 
 set -e
 
-# Enable unfree packages
-mkdir -p $HOME/.config/nixpkgs
-printf "{ allowUnfree = true; }" >> $HOME/.config/nixpkgs/config.nix
-
 # Download polybar-themes e rofi (credits for adi1090x)
 git clone --depth=1 https://github.com/adi1090x/polybar-themes.git $HOME/polybar-themes
 chmod +x $HOME/polybar-themes/setup.sh
