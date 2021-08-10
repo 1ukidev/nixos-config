@@ -424,11 +424,9 @@ in
     qemu-utils
 
     # Libs
-    glibc
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins
-    libstdcxx5
     libvorbis
     libvpx
     llvm_12
