@@ -103,11 +103,21 @@ in
   # Set keymap in X11.
   services.xserver.layout = "br";
 
-  # Define driver in X11.
+  # Define drivers in X11.
   services.xserver.videoDrivers = [ "modesetting" ];
   services.xserver.useGlamor = true;
-
-  # Enable Intel hybrid codec and NUR.
+  services.xserver.libinput.enable = true;
+  services.xserver.config = ''
+    Section "InputClass"
+      Identifier "Mouse accel"
+      Driver "libinput"
+      MatchIsPointer "on"
+      Option "AccelProfile" "flat"
+      Option "AccelSpeed" "0"
+    EndSection
+  '';
+  
+  # Enable support for Intel hybrid codec and NUR.
   nixpkgs.config.packageOverrides = pkgs: {
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
     nur = import (builtins.fetchTarball
@@ -156,7 +166,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luki = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" "fuse" "video" "audio" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" "fuse" "video" "audio" "scanner" "lp" ];
     shell = pkgs.fish;
   };
 
