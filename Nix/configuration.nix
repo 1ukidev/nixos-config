@@ -237,15 +237,16 @@ in
 
     # Internet
     brave
+    element-desktop
     firefox-bin
     ipfs
     kodi
+    unstable.kotatogram-desktop
     megasync
     pidgin
     qutebrowser
     ripcord
     signal-desktop
-    tdesktop
     thunderbird-bin
     tor-browser-bundle-bin
     transmission_gtk
@@ -266,7 +267,6 @@ in
     cmake
     emacs
     fritzing
-    gcc11
     gdb
     ghc
     gitFull
@@ -411,6 +411,7 @@ in
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins
+    libstdcxx5
     libvorbis
     libvpx
     llvm_12
@@ -431,7 +432,6 @@ in
     bc
     binutils
     bison
-    fakeroot
     file
     findutils
     gawk
@@ -441,6 +441,7 @@ in
     gnupatch
     gnused
     libtool
+    mc
     pkgconf
     texinfo
     which
