@@ -141,11 +141,12 @@ in
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # Enable sound.
+  # Enable sound and PulseAudio.
   sound.enable = true;
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
+    # Reduce microphone noise.
     extraConfig = ''
       load-module module-echo-cancel aec_args="analog_gain_control=0 digital_gain_control=0" source_name=noiseless
       set-default-source noiseless
@@ -343,6 +344,7 @@ in
     scrcpy
     sct
     teamviewer
+    tldr
     unstable.betterdiscordctl
     winetricks
     wineWowPackages.full
