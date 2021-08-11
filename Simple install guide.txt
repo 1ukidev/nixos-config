@@ -39,7 +39,7 @@ cp configuration.nix /mnt/etc/nixos/configuration.nix
 
 8 - End
 *Remove "options" inside the partition / in /mnt/etc/nixos/hardware-configuration.nix file*
-time nixos-install -j 4
+nixos-install -j 4
 reboot
 
 After reboot:
