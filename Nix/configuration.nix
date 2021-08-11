@@ -275,6 +275,7 @@ in
     cmake
     emacs
     fritzing
+    gcc11
     gdb
     ghc
     gitFull
