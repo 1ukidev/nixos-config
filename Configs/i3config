@@ -2,7 +2,7 @@
 
 set $mod Mod4
 
-# font for window titles.
+# set font for window titles.
 font pango:sans 9
 
 # use pactl to adjust volume in PulseAudio.
@@ -162,6 +162,9 @@ bindsym $mod+b exec alacritty -e bc --quiet
 exec --no-startup-id ~/.config/polybar/launch.sh --material
 bindsym $mod+Shift+p exec --no-startup-id pkill polybar
 bindsym $mod+Shift+o exec --no-startup-id ~/.config/polybar/launch.sh --material
+
+# hide mouse
+exec --no-startup-id xbanish
 
 # dunst
 exec --no-startup-id dunst
