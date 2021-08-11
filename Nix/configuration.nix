@@ -391,6 +391,7 @@ in
     pipes
     pulsemixer
     speedtest-cli
+    spotdl
     tmux
     tokei
     tree
