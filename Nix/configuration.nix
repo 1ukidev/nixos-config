@@ -110,19 +110,10 @@ in
   # Set keymap in X11.
   services.xserver.layout = "br";
 
-  # Define drivers in X11.
+  # Enable drivers in X11.
   services.xserver.videoDrivers = [ "modesetting" ];
   services.xserver.useGlamor = true;
   services.xserver.libinput.enable = true;
-  services.xserver.config = ''
-    Section "InputClass"
-      Identifier "Mouse accel"
-      Driver "libinput"
-      MatchIsPointer "on"
-      Option "AccelProfile" "flat"
-      Option "AccelSpeed" "0"
-    EndSection
-  '';
   
   # Enable support for Intel hybrid codec and NUR.
   nixpkgs.config.packageOverrides = pkgs: {
@@ -197,8 +188,9 @@ in
       grep = "rg";
       rmf = "sudo rm -rf";
       cp = "cp -i";
+      suspend = "systemctl suspend";
     };
-    
+
     shellInit = ''
       # Remove welcome message.
       set fish_greeting ""
@@ -222,7 +214,6 @@ in
     enable = true;
     antialias = true;
     useEmbeddedBitmaps = true;
-
     defaultFonts = {
       serif = [
         "Noto Serif"
@@ -310,6 +301,7 @@ in
 
     # System
     alacritty
+    coreutils-full
     curl
     dracula-theme
     dunst
@@ -331,6 +323,7 @@ in
     picom
     ripgrep
     sxiv
+    utillinux
     xarchiver
     xfce.xfce4-power-manager
     xorg.xbacklight
@@ -403,7 +396,7 @@ in
     pcsx2
     ppsspp
     snes9x-gtk
-    # unstable.osu-lazer
+    unstable.osu-lazer
 
     # Text
     libreoffice-fresh
@@ -462,10 +455,6 @@ in
     texinfo
     which
 
-    # Fucking essential
-    coreutils-full
-    utillinux
-
   ];
 
   # Allow ffmpeg installation.
@@ -502,7 +491,7 @@ in
   # Enable Docker.
   virtualisation.docker.enable = false;
  
-  # Enable Teamviewer
+  # Enable TeamViewer
   services.teamviewer.enable = false;
 
   # Enable MPD.
@@ -511,7 +500,7 @@ in
   #   extraConfig = ''
   #   audio_output {
   #     type "pulse" # MPD must use Pulseaudio
-  #     name "Pulseaudio" # Whatever you want
+  #     name "PulseAudio" # Whatever you want
   #     server "127.0.0.1" # MPD must connect to the local sound server
   #    }
   #  '';
