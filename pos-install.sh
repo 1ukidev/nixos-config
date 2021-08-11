@@ -1,5 +1,4 @@
 # Shell script to configure some things
-# Untested script
 
 set -e
 
