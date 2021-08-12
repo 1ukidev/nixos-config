@@ -249,12 +249,12 @@ in
     firefox-bin
     ipfs
     kodi
-    unstable.kotatogram-desktop
     megasync
     pidgin
     qutebrowser
     ripcord
     signal-desktop
+    tdesktop
     thunderbird-bin
     tor-browser-bundle-bin
     transmission_gtk
@@ -419,6 +419,7 @@ in
     qemu-utils
 
     # Libs
+    glibc
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins
