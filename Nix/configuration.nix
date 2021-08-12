@@ -300,7 +300,6 @@ in
     yarn
 
     # System
-    alacritty
     aria
     coreutils-full
     curl
@@ -312,6 +311,7 @@ in
     fuse
     fuse3
     gparted
+    kitty
     leafpad
     linuxHeaders
     linuxPackages_zen.v4l2loopback
@@ -354,7 +354,6 @@ in
     lolcat
     scrcpy
     sct
-    teamviewer
     tldr
     unstable.betterdiscordctl
     winetricks
@@ -362,7 +361,9 @@ in
     wirelesstools
     xbanish
     xcolor
+    xdg-launch
     xdg_utils
+    xdg-user-dirs
     xonsh
     xorg.xkill
     xsane
@@ -493,9 +494,6 @@ in
   # Enable Docker.
   virtualisation.docker.enable = false;
  
-  # Enable TeamViewer
-  services.teamviewer.enable = false;
-
   # Enable MPD.
   # services.mpd = {
   #   enable = true;
