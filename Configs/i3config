@@ -163,6 +163,9 @@ exec --no-startup-id ~/.config/polybar/launch.sh --material
 bindsym $mod+Shift+p exec --no-startup-id pkill polybar
 bindsym $mod+Shift+o exec --no-startup-id ~/.config/polybar/launch.sh --material
 
+# mouse sensitivity
+# exec --no-startup-id xinput set-prop "Logitech Wireless Mouse" "Coordinate Transformation Matrix" 0.4 0 0 0 0.4 0 0 0 1
+
 # hide mouse
 exec --no-startup-id xbanish
 
