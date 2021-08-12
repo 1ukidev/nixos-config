@@ -301,6 +301,7 @@ in
 
     # System
     alacritty
+    aria
     coreutils-full
     curl
     dracula-theme
