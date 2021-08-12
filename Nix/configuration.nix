@@ -141,11 +141,11 @@ in
 
   # Enable print support.
   services.printing.enable = true;
-  services.printing.drivers = with pkgs; [ epson-escpr2 ];
+  services.printing.drivers = [ pkgs.epson-escpr2 ];
   hardware.sane.enable = false;
   hardware.sane.extraBackends = [ pkgs.epkowa ];
 
-  # Enable Bluetooth.
+  # Enable Bluetooth support.
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
@@ -188,7 +188,6 @@ in
       grep = "rg";
       rmf = "sudo rm -rf";
       cp = "cp -i";
-      suspend = "systemctl suspend";
     };
 
     shellInit = ''
@@ -307,7 +306,7 @@ in
     dracula-theme
     dunst
     exfat
-    exfat-utils
+    exfatprogs
     flameshot
     fuse
     fuse3
