@@ -11,9 +11,9 @@ chmod +x $HOME/rofi/setup.sh
 # Configure i3
 cp Configs/i3config $HOME/.config/i3/config
 
-# Configure alacritty
-mkdir -p $HOME/.config/alacritty
-cp Configs/alacritty.yml $HOME/.config/alacritty
+# Configure kitty
+mkdir -p $HOME/.config/kitty
+cp Configs/kitty.conf $HOME/.config/kitty
 
 # Configure picom
 mkdir -p $HOME/.config/picom
