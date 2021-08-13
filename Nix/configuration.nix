@@ -483,7 +483,7 @@ in
 
   # Enable the OpenSSH daemon.
   services.openssh = {
-    enable = false;
+    enable = true;
     permitRootLogin = "no";
     ports = [ 2222 ];
     extraConfig = ''
