@@ -30,7 +30,8 @@ in
   fileSystems."/" = {
     options = [ "subvol=nixos" "compress=zstd" "discard" "noatime" "ssd" "space_cache" "autodefrag" ];
   };
-
+  nix.readOnlyStore = false;
+  
   # Set CPUFreq governor.
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 
