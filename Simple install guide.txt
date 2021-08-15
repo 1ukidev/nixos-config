@@ -17,10 +17,10 @@ mkswap -L SWAP /dev/sdXX
 
 5 - Mount partitions
 swapon /dev/sdXX
-mount -t btrfs /dev/sdXX /mnt/
+mount -t btrfs /dev/sdXX /mnt
 btrfs subvolume create /mnt/nixos
 umount /mnt
-mount -t btrfs -o subvol=nixos /dev/sdXX /mnt/
+mount -t btrfs -o subvol=nixos /dev/sdXX /mnt
 btrfs subvolume create /mnt/var
 btrfs subvolume create /mnt/home
 btrfs subvolume create /mnt/tmp
@@ -43,7 +43,6 @@ nixos-install -j 4
 reboot
 
 After reboot:
-
 1 - Put password on user
 *CTRL+ALT+F1*
 *Login as root*
