@@ -309,7 +309,6 @@ in
     exfatprogs
     flameshot
     fuse
-    fuse3
     gparted
     kitty
     leafpad
