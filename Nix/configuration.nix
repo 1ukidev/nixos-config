@@ -124,7 +124,7 @@ in
       };
   };
 
-  # Enable OpenGL and accelerated video playback.
+  # Enable OpenGL and accelerated video playback (i965).
   hardware.opengl = {
     enable = true;
     driSupport = true;
