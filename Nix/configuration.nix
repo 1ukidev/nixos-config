@@ -154,6 +154,7 @@ in
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
+    package = pkgs.pulseaudioFull
     # Reduce microphone noise.
     extraConfig = ''
       load-module module-echo-cancel aec_args="analog_gain_control=0 digital_gain_control=0" source_name=noiseless
@@ -241,7 +242,6 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # In alphabetic order.
-
     # Internet
     brave
     element-desktop
@@ -459,7 +459,6 @@ in
     pkgconf
     texinfo
     which
-
   ];
 
   # Allow ffmpeg installation.
@@ -509,6 +508,9 @@ in
   # };
   # programs.ncmpcpp.enable = true;
 
+  # Enable dbus
+  services.dbus.enable = true;
+  
   # Enable fstrim.
   services.fstrim.enable = true;
 
