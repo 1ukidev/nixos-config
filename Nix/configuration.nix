@@ -276,6 +276,7 @@ in
     fritzing
     gcc11
     gdb
+    gh
     ghc
     gitFull
     gnumake
@@ -303,6 +304,7 @@ in
     aria
     coreutils-full
     curl
+    dosfstools
     dracula-theme
     dunst
     exfat
