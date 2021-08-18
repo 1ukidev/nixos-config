@@ -142,9 +142,9 @@ in
 
   # Enable print support.
   services.printing.enable = true;
-  services.printing.drivers = [ pkgs.epson-escpr2 ];
+  services.printing.drivers = [ pkgs.epson-escpr ];
   hardware.sane.enable = false;
-  hardware.sane.extraBackends = [ pkgs.epkowa ];
+  hardware.sane.extraBackends = [ pkgs.utsushi ];
 
   # Enable Bluetooth support.
   hardware.bluetooth.enable = true;
