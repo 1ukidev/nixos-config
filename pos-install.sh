@@ -1,8 +1,8 @@
+#!/usr/bin/env bash
 # Shell script to configure some things
-
 set -e
 
-# Download polybar-themes e rofi (credits for adi1090x)
+# Download polybar-themes and rofi (credits for adi1090x)
 git clone --depth=1 https://github.com/adi1090x/polybar-themes.git $HOME/polybar-themes
 chmod +x $HOME/polybar-themes/setup.sh
 git clone --depth=1 https://github.com/adi1090x/rofi $HOME/rofi
@@ -38,4 +38,4 @@ sudo nix-channel --update
 sudo nix-collect-garbage
 
 # End
-printf "\n\nEverything is ok.\n\n\n"
+printf "\n\nSuccessfully concluded.\n\n\n"
