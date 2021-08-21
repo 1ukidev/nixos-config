@@ -398,7 +398,6 @@ in
 
     # Games
     chiaki
-    pcsx2
     ppsspp
     snes9x-gtk
     unstable.osu-lazer
@@ -509,11 +508,11 @@ in
   # };
   # programs.ncmpcpp.enable = true;
 
-  # Enable dbus
-  services.dbus.enable = true;
-  
-  # Enable fstrim.
-  services.fstrim.enable = true;
+  # Enable dbus and fstrim.
+  services = {
+    dbus.enable = true;
+    fstrim.enable = true;
+  };
 
   # Enable the firewall.
   networking.firewall.enable = true;
