@@ -18,6 +18,7 @@ wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant.conf
 
 ### Partition disk
 ```
+wipefs -a /dev/sdX
 cfdisk -z /dev/sdX
 mkfs.fat -F 32 /dev/sdXX && fatlabel /dev/sdXX BOOT
 mkfs.btrfs -f -L ROOT /dev/sdXX
