@@ -156,10 +156,10 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.background       #F8F8F2
 
 # bc
-bindsym $mod+b exec alacritty -e bc --quiet
+bindsym $mod+b exec kitty -e bc --quiet
 
 # polybar
-exec --no-startup-id ~/.config/polybar/launch.sh --material
+# exec --no-startup-id ~/.config/polybar/launch.sh --material
 bindsym $mod+Shift+p exec --no-startup-id pkill polybar
 bindsym $mod+Shift+o exec --no-startup-id ~/.config/polybar/launch.sh --material
 
@@ -194,7 +194,7 @@ bindsym $mod+Shift+u exec --no-startup-id picom --config ~/.config/picom/picom.c
 bindsym $mod+Shift+i exec --no-startup-id pkill picom
 
 # i3lock
-bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Imagens/Wallpapers/1.jpg
+bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1.jpg
 
 # power manager
 exec --no-startup-id xfce4-power-manager
