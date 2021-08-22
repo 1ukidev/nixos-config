@@ -26,7 +26,7 @@ in
   # Use zen kernel.
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
-  # Define mount options (only btrfs).
+  # Define mount options (only Btrfs).
   fileSystems."/" = {
     options = [ "subvol=nixos" "compress=zstd" "discard" "noatime" "ssd" "space_cache" "autodefrag" ];
   };
