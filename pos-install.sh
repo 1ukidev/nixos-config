@@ -40,9 +40,9 @@ sudo nix-channel --update
 # Run garbage collect
 sudo nix-collect-garbage
 
-# Compress /nix/store (only Btrfs)
-sudo btrfs filesystem defragment -r -czstd /nix/store
-printf "\nCompressing /nix/store\nThis may take a while to finish."
+# Compress / (only Btrfs)
+sudo btrfs filesystem defragment -r -czstd /
+printf "\nCompressing /\nThis may take a while to finish."
 
 # End
 printf "\n\nSuccessfully concluded.\n\nSome things to do:\nManually configure GTK and Qt themes.\nSet the wallpaper with nitrogen.\nManually install polybar-themes and rofi.\n\n"
