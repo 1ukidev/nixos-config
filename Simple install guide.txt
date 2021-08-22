@@ -4,7 +4,7 @@ sudo -i
 2 - Load keyboard layout if necessary
 loadkeys <layout>
 
-3 - Enable WiFi if necessary
+3 - Enable Wi-Fi if necessary
 ifconfig <interface> up
 wpa_passphrase <ssid> <passphrase> >> /etc/wpa_supplicant.conf
 wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant.conf
@@ -17,10 +17,10 @@ mkswap -L SWAP /dev/sdXX
 
 5 - Mount partitions
 swapon /dev/sdXX
-mount -t btrfs /dev/sdXX /mnt
+mount /dev/sdXX /mnt
 btrfs subvolume create /mnt/nixos
 umount /mnt
-mount -t btrfs -o subvol=nixos /dev/sdXX /mnt
+mount -o subvol=nixos /dev/sdXX /mnt
 btrfs subvolume create /mnt/var
 btrfs subvolume create /mnt/home
 btrfs subvolume create /mnt/tmp
@@ -32,7 +32,7 @@ nixos-generate-config --root /mnt
 
 7 - Download my configuration
 curl -L -O https://github.com/1ukidev/nixos-config/archive/main.tar.gz
-tar zxf main.tar.gz
+tar xf main.tar.gz
 cd nixos-config-main
 cd Nix
 cp configuration.nix /mnt/etc/nixos/configuration.nix
@@ -51,8 +51,7 @@ passwd <user>
 
 2 - Post-installation
 *Super+Return*
+*Enable Wi-Fi through nmtui if necessary*
 git clone https://github.com/1ukidev/nixos-config
 cd nixos-config
-sh pos-install.sh
-
-The rest is history...
+./pos-install.sh
