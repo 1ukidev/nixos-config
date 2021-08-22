@@ -155,7 +155,7 @@ in
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
-    package = pkgs.pulseaudioFull
+    package = pkgs.pulseaudioFull;
     # Reduce microphone noise.
     extraConfig = ''
       load-module module-echo-cancel aec_args="analog_gain_control=0 digital_gain_control=0" source_name=noiseless
@@ -256,7 +256,7 @@ in
     signal-desktop
     tdesktop
     thunderbird-bin
-    tor-browser-bundle-bin
+    # tor-browser-bundle-bin
     transmission_gtk
     unstable.discord
 
