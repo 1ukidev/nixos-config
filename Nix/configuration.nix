@@ -28,9 +28,14 @@ in
 
   # Define mount options (only Btrfs).
   fileSystems."/" = {
-    options = [ "subvol=nixos" "compress=zstd" "discard" "noatime" "ssd" "space_cache" "autodefrag" ];
+    options = [ "subvol=nixos" "compress=zstd" "discard" "noatime" "ssd" "space_cache" ];
   };
   
+  # If set, NixOS will enforce the immutability of the Nix store
+  # by making /nix/store a read-only bind mount.
+  # Nix will automatically make the store writable when needed.
+  nix.readOnlyStore = false;
+
   # Set CPUFreq governor.
   powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
 
