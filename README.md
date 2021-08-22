@@ -1,13 +1,13 @@
 <div align="center">
   
 # NixOS Config
-## Personal configuration of the NixOS
+## Personal configuration of the NixOS.
 ![Screenshot](screenshot1.png)
----
 
 ## System
 | Type           | Name                          |
 | -------------  | ----------------------------- |
+| NixOS version  | 21.05                         |
 | Shell          | fish                          |
 | Terminal       | kitty                         |
 | Filesystem     | Btrfs (with Zstd compression) |
@@ -15,7 +15,6 @@
 | Window manager | i3                            |
 | Compositor     | picom                         |
 | Notifications  | Dunst                         |
-| NixOS version  | 21.05                         |
 
 ## Themes
 | Type           | Name                          |
@@ -24,7 +23,7 @@
 | GTK Icon Theme | Papirus                       |
 | Terminal Font  | JetBrains Mono Nerd Font      |
 
-## Simple installation guide:
+## Simple installation guide
 ### [INSTALL.md](INSTALL.md)
 
 </div>
