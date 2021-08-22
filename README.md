@@ -1,9 +1,19 @@
 <div align="center">
   
-# NixOS config
+# NixOS Config
 ## Personal configuration of the NixOS.
-## Current version: 21.05
+## [Install](INSTALL.md)
 ![Screenshot](screenshot1.png)
-#### Btrfs with Zstd compression (no encryption) | GRUB with UEFI | i3 | Polybar | Rofi | Dunst | kitty | picom
-
+---
+|                |                               |
+| -------------  | ----------------------------- |
+| Shell          | fish                          |
+| Terminal       | kitty                         |
+| Filesystem     | Btrfs (with Zstd compression) |
+| Bootloader     | GRUB with UEFI                |
+| Window manager | i3                            |
+| Compositor     | picom                         |
+| Notifications  | Dunst                         |
+| NixOS version  | 21.05                         |
+  
 </div>
