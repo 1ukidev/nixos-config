@@ -6,7 +6,6 @@ set -e
 xdg-user-dirs-update
 
 # Download polybar-themes and rofi (credits for adi1090x)
-# Install manually
 git clone --depth=1 https://github.com/adi1090x/polybar-themes.git $HOME/polybar-themes
 chmod +x $HOME/polybar-themes/setup.sh
 git clone --depth=1 https://github.com/adi1090x/rofi $HOME/rofi
@@ -23,7 +22,7 @@ cp Configs/kitty.conf $HOME/.config/kitty
 mkdir -p $HOME/.config/picom
 cp Configs/picom.conf $HOME/.config/picom
 
-# Setup dunst
+# Setup Dunst
 mkdir -p $HOME/.config/dunst
 cp Configs/dunstrc $HOME/.config/dunst
 
@@ -35,11 +34,11 @@ cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
 sudo mkdir -p /usr/share/backgrounds
 sudo cp Wallpaper/1.jpg /usr/share/backgrounds
 
-# Update nix
+# Update Nix
 sudo nix-channel --update
 
 # Run garbage collect
 sudo nix-collect-garbage
 
 # End
-printf "\n\nSuccessfully concluded.\n\n\n"
+printf "\n\nSuccessfully concluded.\n\nWarning:\nManually configure GTK and Qt themes.\nSet the wallpaper with nitrogen.\nManually install polybar-themes and rofi.\n\n"
