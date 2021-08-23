@@ -1,3 +1,4 @@
+## No encryption
 ## Installation:
 ### Become superuser
 ```
