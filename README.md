@@ -1,13 +1,13 @@
 <div align="center">
   
 # NixOS Config
-## Personal configuration of the NixOS.
+## Personal configuration of NixOS.
 ![Screenshot](screenshot1.png)
 
 ## System:
 | Type           | Name                          |
 | -------------  | ----------------------------- |
-| NixOS version  | 21.05                         |
+| NixOS version  | Okapi (21.05)                 |
 | Shell          | fish                          |
 | Terminal       | kitty                         |
 | Filesystem     | Btrfs (with Zstd compression) |
