@@ -22,8 +22,8 @@
 | GTK Theme      | Dracula                       |
 | GTK Icon Theme | Papirus                       |
 | Terminal Font  | JetBrains Mono Nerd Font      |
-
-## Simple installation guide:
+---
+### [configuration.nix](Nix/configuration.nix)
 ### [INSTALL.md](INSTALL.md)
 
 </div>
