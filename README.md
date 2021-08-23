@@ -1,6 +1,6 @@
 <div align="center">
   
-# NixOS Config
+# NixOS config
 ## Personal configuration of NixOS.
 ![Screenshot](screenshot1.png)
 
