@@ -37,8 +37,9 @@ sudo cp Wallpaper/1.jpg /usr/share/backgrounds
 # Update Nix
 sudo nix-channel --update
 
-# Run garbage collect
-sudo nix-collect-garbage
+# Clean system
+sudo nix-collect-garbage -d
+sudo nix-store --optimise
 
 # Compress and defragment / (only Btrfs)
 printf "\nCompressing and defragmenting /\nThis may take a while to finish."
