@@ -41,8 +41,9 @@ sudo nix-channel --update
 sudo nix-collect-garbage
 
 # Compress and defragment / (only Btrfs)
-printf "\nCompressing and defragmenting / (only Btrfs)\nThis may take a while to finish."
+printf "\nCompressing and defragmenting /\nThis may take a while to finish."
 sudo btrfs filesystem defragment -r -czstd /
 
 # End
-printf "\n\nSuccessfully concluded.\n\nSome things to do:\nManually configure GTK and Qt themes.\nSet the wallpaper with nitrogen.\nManually install polybar-themes and rofi.\n\n"
+printf "\n\nSuccessfully concluded.\n\nSome things to do: \
+        \nManually define GTK and Qt themes\nSet the wallpaper with nitrogen\nManually install polybar-themes and rofi\nSee ~/.config/i3/config\n\n"
