@@ -39,12 +39,12 @@ sudo nix-channel --update
 
 # Clean system
 sudo nix-collect-garbage -d
+printf "Cleaning...\nThis may take a while.\n"
 sudo nix-store --optimise
 
 # Compress and defragment / (only Btrfs)
-printf "\nCompressing and defragmenting /\nThis may take a while to finish."
+printf "\nCompressing and defragmenting /\nThis can take a long time to finish.\n"
 sudo btrfs filesystem defragment -r -czstd /
 
 # End
-printf "\n\nSuccessfully concluded.\n\nSome things to do: \
-        \nManually define GTK and Qt themes\nSet the wallpaper with nitrogen\nManually install polybar-themes and rofi\nSee ~/.config/i3/config\n\n"
+printf "\nSuccessfully concluded.\n\n"
