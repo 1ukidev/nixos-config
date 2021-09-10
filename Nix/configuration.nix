@@ -116,6 +116,9 @@ in
   # Enable qt5ct.
   programs.qt5ct.enable = true;
 
+  # Enable dconf.
+  programs.dconf.enable = true;
+
   # Set keymap in X11.
   services.xserver.layout = "br";
 
@@ -174,7 +177,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luki = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" "fuse" "video" "audio" "scanner" "lp" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" "fuse" "video" "audio" "scanner" "lp" "libvirtd" ];
     shell = pkgs.fish;
   };
 
@@ -428,7 +431,8 @@ in
     docker
     qemu
     qemu-utils
-
+    virt-manager
+ 
     # Libs
     glibc
     libopus
@@ -446,6 +450,7 @@ in
     p7zip
     unrar
     unzip
+    xz
     zstd
 
     # Others GNU tools
@@ -472,11 +477,12 @@ in
   # Allow ffmpeg installation.
   nixpkgs.config.permittedInsecurePackages = [ "ffmpeg-3.4.8" ];
 
-  # Enable VirtualBox.
+  # Enable VirtualBox and libvird.
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true;
   # users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
-
+  virtualisation.libvirtd.enable = false;
+  
   # Enable the Android Debug Bridge.
   programs.adb.enable = true;
 
