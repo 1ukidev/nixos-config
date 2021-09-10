@@ -60,7 +60,7 @@ in
     };
   };
 
-  networking.hostName = "LuKi-PC"; # Define your hostname.
+  networking.hostName = "LuKi-Linux-PC"; # Define your hostname.
   networking.wireless.enable = false; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Enable NetworkManager.
 
@@ -113,7 +113,7 @@ in
   # Set environment.
   environment.variables = { EDITOR = "emacs"; };
 
-  # Enable qt5ct.
+  # Enable qt5ct to set the qt5 theme.
   programs.qt5ct.enable = true;
 
   # Enable dconf.
@@ -438,6 +438,7 @@ in
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins
+    libvirt
     libvorbis
     libvpx
     llvm_12
@@ -522,7 +523,7 @@ in
   # };
   # programs.ncmpcpp.enable = true;
 
-  # Enable dbus and fstrim.
+  # Enable dbus, fstrim and thermald.
   services = {
     dbus.enable = true;
     fstrim.enable = true;
