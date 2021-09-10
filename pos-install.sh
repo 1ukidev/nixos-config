@@ -39,11 +39,11 @@ sudo nix-channel --update
 
 # Clean system
 sudo nix-collect-garbage -d
-printf "Cleaning...\nThis may take a while.\n"
+printf "Cleaning...\nThis may take a while...\n"
 sudo nix-store --optimise
 
 # Compress and defragment / (only Btrfs)
-printf "\nCompressing and defragmenting /\nThis can take a long time to finish.\n"
+printf "\nCompressing and defragmenting /\nThis can take a long time to finish...\n"
 sudo btrfs filesystem defragment -r -czstd /
 
 # End
