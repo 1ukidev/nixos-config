@@ -37,11 +37,11 @@ in
   nix.readOnlyStore = false;
 
   # Set CPUFreq governor.
-  powerManagement = [
+  powerManagement = {
     enable = true;
     powertop.enable = false;
     cpuFreqGovernor = "performance";
-  ];
+  };
 
   # Use GRUB 2 bootloader.
   boot.loader = {
