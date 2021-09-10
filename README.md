@@ -10,6 +10,7 @@
 | NixOS version  | Okapi (21.05)                 |
 | Shell          | fish                          |
 | Terminal       | kitty                         |
+| Launcher       | Rofi                          |
 | Filesystem     | Btrfs (with Zstd compression) |
 | Bootloader     | GRUB (with UEFI)              |
 | Window manager | i3                            |
