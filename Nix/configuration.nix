@@ -1,6 +1,6 @@
 # NixOS 21.05 config - 1ukidev
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 # Easy way to install unstable packages.
 let
@@ -37,7 +37,11 @@ in
   nix.readOnlyStore = false;
 
   # Set CPUFreq governor.
-  powerManagement.cpuFreqGovernor = lib.mkDefault "performance";
+  powerManagement = [
+    enable = true;
+    powertop.enable = false;
+    cpuFreqGovernor = "performance";
+  ];
 
   # Use GRUB 2 bootloader.
   boot.loader = {
@@ -129,7 +133,7 @@ in
       };
   };
 
-  # Enable OpenGL and accelerated video playback (i965).
+  # Enable OpenGL and accelerated video playback.
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -152,7 +156,7 @@ in
 
   # Enable Bluetooth support.
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
+  services.blueman.enable = false;
 
   # Enable sound and PulseAudio.
   sound.enable = true;
@@ -516,6 +520,7 @@ in
   services = {
     dbus.enable = true;
     fstrim.enable = true;
+    thermald.enable = true;
   };
 
   # Enable the firewall.
