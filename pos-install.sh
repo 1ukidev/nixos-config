@@ -30,7 +30,7 @@ cp Configs/dunstrc $HOME/.config/dunst
 mkdir -p $HOME/Pictures/Wallpapers
 cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
 
-# Move wallpaper to /usr/share/backgrounds (because of LightDM)
+# Move wallpaper to /usr/share/backgrounds
 sudo mkdir -p /usr/share/backgrounds
 sudo cp Wallpaper/1.jpg /usr/share/backgrounds
 
