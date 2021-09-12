@@ -28,7 +28,7 @@ in
 
   # Define mount options (only Btrfs).
   fileSystems."/" = {
-    options = [ "subvol=nixos" "compress=zstd" "discard" "noatime" "ssd" "space_cache" ];
+    options = [ "subvol=nixos" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
   };
   
   # If set, NixOS will enforce the immutability of the Nix store
