@@ -30,12 +30,21 @@ mkswap -L SWAP /dev/sdXX
 ```
 swapon /dev/sdXX
 mount /dev/sdXX /mnt
-btrfs subvolume create /mnt/nixos
-umount /mnt
-mount -o subvol=nixos /dev/sdXX /mnt
-btrfs subvolume create /mnt/var
+btrfs subvolume create /mnt/root
 btrfs subvolume create /mnt/home
+btrfs subvolume create /mnt/nix
+btrfs subvolume create /mnt/var
 btrfs subvolume create /mnt/tmp
+umount /mnt
+mount -o subvol=root,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mkdir /mnt/home
+mount -o subvol=home,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mkdir /mnt/nix
+mount -o subvol=nix,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mkdir /mnt/var
+mount -o subvol=var,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mkdir /mnt/tmp
+mount -o subvol=tmp,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
 mkdir -p /mnt/boot/efi
 mount /dev/sdXX /mnt/boot/efi
 ```
@@ -49,14 +58,13 @@ nixos-generate-config --root /mnt
 ```
 curl -L -O https://github.com/1ukidev/nixos-config/archive/main.tar.gz
 tar xf main.tar.gz
-cd nixos-config-main
-cd Nix
+cd nixos-config-main/Nix
 cp configuration.nix /mnt/etc/nixos/configuration.nix
 ```
 
 ### Install NixOS
 ```
-*Remove "options" inside the partition / in /mnt/etc/nixos/hardware-configuration.nix file*
+*Remove "options" from all "fileSystems" in the /mnt/etc/nixos/hardware-configuration.nix file*
 nixos-install -j 4
 reboot
 ```
