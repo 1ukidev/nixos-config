@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Shell script to configure some things
+# Shell script to run some important tasks
 set -e
 
 # Create user folders
