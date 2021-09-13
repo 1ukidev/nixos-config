@@ -55,7 +55,7 @@ in
     };
   };
 
-  networking.hostName = "LuKi-NixOS-PC"; # Define your hostname.
+  networking.hostName = "LuKi-NixOS"; # Define your hostname.
   networking.wireless.enable = false; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Enable NetworkManager.
 
@@ -245,6 +245,7 @@ in
     };
   };
 
+  # Install system packages.
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -529,8 +530,8 @@ in
   networking.firewall.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 2222 ];
-  networking.firewall.allowedUDPPorts = [ 2222 ];
+  networking.firewall.allowedTCPPorts = [ 2222 631 ];
+  networking.firewall.allowedUDPPorts = [ 2222 631 ];
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
