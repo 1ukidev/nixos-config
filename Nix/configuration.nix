@@ -28,7 +28,23 @@ in
 
   # Define mount options (only Btrfs).
   fileSystems."/" = {
-    options = [ "subvol=nixos" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+    options = [ "subvol=root" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+  
+  fileSystems."/home" = {
+    options = [ "subvol=home" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+
+  fileSystems."/nix" = {
+    options = [ "subvol=nix" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+
+  fileSystems."/var" =  { 
+    options = [ "subvol=var" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+
+  fileSystems."/tmp" = { 
+    options = [ "subvol=tmp" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
   };
   
   # If set, NixOS will enforce the immutability of the Nix store
@@ -60,7 +76,7 @@ in
     };
   };
 
-  networking.hostName = "LuKi-Linux-PC"; # Define your hostname.
+  networking.hostName = "LuKi-NixOS-PC"; # Define your hostname.
   networking.wireless.enable = false; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Enable NetworkManager.
 
