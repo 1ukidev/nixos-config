@@ -43,8 +43,16 @@ printf "Cleaning...\nThis may take a while...\n"
 sudo nix-store --optimise
 
 # Compress and defragment / (only Btrfs)
-printf "\nCompressing and defragmenting /\nThis can take a long time to finish...\n"
+printf "\nCompressing and defragmenting /..."
 sudo btrfs filesystem defragment -r -czstd /
+printf "\nCompressing and defragmenting /home..."
+sudo btrfs filesystem defragment -r -czstd /home
+printf "\nCompressing and defragmenting /nix...\nThis can take a long time to finish..."
+sudo btrfs filesystem defragment -r -czstd /nix
+printf "\nCompressing and defragmenting /var..."
+sudo btrfs filesystem defragment -r -czstd /var
+printf "\nCompressing and defragmenting /tmp...\n"
+sudo btrfs filesystem defragment -r -czstd /tmp
 
 # End
 printf "\nSuccessfully concluded.\n\n"
