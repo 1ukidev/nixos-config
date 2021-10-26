@@ -99,10 +99,11 @@ in
     nitrogen
     papirus-icon-theme
     pavucontrol
-    pcmanfm
     picom
     ripgrep
     sxiv
+    thunar
+    thunar-volman
     utillinux
     xarchiver
     xfce.xfce4-power-manager
