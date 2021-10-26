@@ -12,6 +12,7 @@ in
 
 {
   # Install system packages.
+  # Some packages are enabled in configuration.nix
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
