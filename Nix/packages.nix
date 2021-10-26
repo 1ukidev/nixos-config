@@ -203,6 +203,7 @@ in
  
     # Libs
     glibc
+    gnome.gvfs
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins
