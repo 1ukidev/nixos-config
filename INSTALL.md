@@ -74,6 +74,7 @@ reboot
 *CTRL+ALT+F1*
 *Login as root*
 passwd <user>
+exit
 *CTRL+ALT+F7*
 ```
 
@@ -85,4 +86,5 @@ passwd <user>
 git clone https://github.com/1ukidev/nixos-config
 cd nixos-config
 ./pos-install.sh
+reboot
 ```
