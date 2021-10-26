@@ -38,13 +38,13 @@ btrfs subvolume create /mnt/tmp
 umount /mnt
 mount -o subvol=root,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
 mkdir /mnt/home
-mount -o subvol=home,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mount -o subvol=home,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt/home
 mkdir /mnt/nix
-mount -o subvol=nix,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mount -o subvol=nix,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt/nix
 mkdir /mnt/var
-mount -o subvol=var,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mount -o subvol=var,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt/var
 mkdir /mnt/tmp
-mount -o subvol=tmp,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt
+mount -o subvol=tmp,noatime,space_cache,autodefrag,discard,compress=zstd /dev/sdXX /mnt/tmp
 mkdir -p /mnt/boot/efi
 mount /dev/sdXX /mnt/boot/efi
 ```
