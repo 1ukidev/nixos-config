@@ -24,6 +24,7 @@ in
     ipfs
     kodi
     megasync
+    ngrok
     pidgin
     qutebrowser
     ripcord
