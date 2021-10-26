@@ -64,7 +64,7 @@ cp configuration.nix /mnt/etc/nixos/configuration.nix
 
 ### Install NixOS
 ```
-nixos-install -j 4
+nixos-install -j $(nproc)
 reboot
 ```
 
