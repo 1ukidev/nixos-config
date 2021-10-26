@@ -76,6 +76,7 @@ in
     shc
     unstable.sublime4
     unstable.vscode
+    vimHugeX
     yarn
 
     # System
