@@ -3,7 +3,7 @@
 set $mod Mod4
 
 # set font for window titles.
-font pango:sans 9
+font pango:monospace 9
 
 # use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -164,7 +164,7 @@ bindsym $mod+Shift+p exec --no-startup-id pkill polybar
 bindsym $mod+Shift+o exec --no-startup-id ~/.config/polybar/launch.sh --material
 
 # mouse sensitivity
-# exec --no-startup-id xinput set-prop "Logitech Wireless Mouse" "Coordinate Transformation Matrix" 0.4 0 0 0 0.4 0 0 0 1
+# exec --no-startup-id xinput set-prop "Logitech Wireless Mouse" "Coordinate Transformation Matrix" 0.8 0 0 0 0.8 0 0 0 1
 
 # hide mouse
 exec --no-startup-id xbanish
