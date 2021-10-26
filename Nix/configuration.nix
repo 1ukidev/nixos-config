@@ -25,7 +25,28 @@ in
 
   # Use zen kernel.
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  
+  # Define mount options (only Btrfs).
+  fileSystems."/" = {
+    options = [ "subvol=root" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
 
+  fileSystems."/home" = {
+    options = [ "subvol=home" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+
+  fileSystems."/nix" = {
+    options = [ "subvol=nix" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+
+  fileSystems."/var" = {
+    options = [ "subvol=var" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+
+  fileSystems."/tmp" = { 
+    options = [ "subvol=tmp" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+  };
+  
   # If set, NixOS will enforce the immutability of the Nix store
   # by making /nix/store a read-only bind mount.
   # Nix will automatically make the store writable when needed.
