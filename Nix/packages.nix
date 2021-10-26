@@ -218,7 +218,7 @@ in
     xz
     zstd
 
-    # Others GNU tools
+    # Others GNU tools (unnecessary?)
     autoconf
     automake
     bc
@@ -228,7 +228,6 @@ in
     findutils
     gawk
     gettext
-    gnufdisk
     gnum4
     gnupatch
     gnused
