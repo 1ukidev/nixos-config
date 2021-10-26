@@ -60,6 +60,7 @@ curl -L -O https://github.com/1ukidev/nixos-config/archive/main.tar.gz
 tar xf main.tar.gz
 cd nixos-config-main/Nix
 cp configuration.nix /mnt/etc/nixos/configuration.nix
+cp packages.nix /mnt/etc/nixos
 ```
 
 ### Install NixOS
