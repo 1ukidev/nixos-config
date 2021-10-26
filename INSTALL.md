@@ -64,6 +64,8 @@ cp configuration.nix /mnt/etc/nixos/configuration.nix
 
 ### Install NixOS
 ```
+*Remove "options" from all "fileSystems" in hardware-configuration.nix*
+*The mount options are defined in configuration.nix*
 nixos-install -j $(nproc)
 reboot
 ```
