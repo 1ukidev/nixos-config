@@ -34,6 +34,8 @@ in
     # tor-browser-bundle-bin
     transmission_gtk
     unstable.discord
+    unstable.dotnet-runtime
+    unstable.dotnet-sdk
 
     # Production
     audacity-gtk3
