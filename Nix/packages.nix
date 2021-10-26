@@ -161,6 +161,7 @@ in
     elinks
     figlet
     htop
+    iotop
     ncdu
     neofetch
     nix-tree
