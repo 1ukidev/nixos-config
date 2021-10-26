@@ -102,8 +102,9 @@ in
     picom
     ripgrep
     sxiv
-    thunar
-    thunar-volman
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
     utillinux
     xarchiver
     xfce.xfce4-power-manager
