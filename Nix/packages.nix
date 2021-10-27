@@ -19,6 +19,7 @@ in
     # In alphabetic order.
     # Internet
     brave
+    chromium
     element-desktop
     firefox-bin
     ipfs
