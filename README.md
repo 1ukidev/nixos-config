@@ -11,7 +11,7 @@
 | Shell          | fish                          |
 | Terminal       | kitty                         |
 | Launcher       | Rofi                          |
-| Filesystem     | Btrfs (with Zstd compression) |
+| Filesystem     | Btrfs (with zstd compression) |
 | Bootloader     | GRUB (with UEFI)              |
 | Window manager | i3                            |
 | Compositor     | picom                         |
