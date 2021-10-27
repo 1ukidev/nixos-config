@@ -194,6 +194,7 @@ in
     # Security and clean
     bleachbit
     chkrootkit
+    dig
     nmap
     protonvpn-cli
     veracrypt
