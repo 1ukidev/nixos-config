@@ -26,13 +26,13 @@ in
     megasync
     ngrok
     pidgin
+    qbittorrent
     qutebrowser
     ripcord
     signal-desktop
     tdesktop
     thunderbird-bin
     # tor-browser-bundle-bin
-    transmission_gtk
     unstable.discord
     unstable.dotnet-runtime
     unstable.dotnet-sdk
@@ -115,9 +115,11 @@ in
     # Video, audio and recording
     cmus
     ffmpeg-full
+    mplayer
     mpv
     obs-studio
     simplescreenrecorder
+    vlc
 
     # Extras
     alsaUtils
@@ -206,6 +208,7 @@ in
     # Libs
     glibc
     gnome.gvfs
+    libcaca
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins

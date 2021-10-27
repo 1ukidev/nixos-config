@@ -209,6 +209,7 @@
       l = "ls -a";
       la = "ls -la";
       grep = "rg";
+      cgrep = "/run/current-system/sw/bin/grep";
       rmf = "sudo rm -rf";
       cp = "cp -i";
     };
