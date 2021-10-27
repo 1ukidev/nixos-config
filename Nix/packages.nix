@@ -104,6 +104,7 @@ in
     pavucontrol
     picom
     ripgrep
+    srm
     sxiv
     xfce.thunar
     xfce.thunar-archive-plugin
