@@ -101,6 +101,7 @@ in
     lxappearance
     mtpfs
     nitrogen
+    okular
     papirus-icon-theme
     pavucontrol
     picom
@@ -114,7 +115,6 @@ in
     xarchiver
     xfce.xfce4-power-manager
     xorg.xbacklight
-    zathura
 
     # Video, audio and recording
     cmus
