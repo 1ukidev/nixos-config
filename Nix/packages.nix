@@ -35,8 +35,6 @@ in
     thunderbird-bin
     # tor-browser-bundle-bin
     unstable.discord
-    unstable.dotnet-runtime
-    unstable.dotnet-sdk
 
     # Production
     audacity-gtk3
@@ -51,6 +49,7 @@ in
     cargo
     clang_12
     cmake
+    dotnet-sdk_5
     emacs
     fritzing
     gcc11
@@ -64,11 +63,12 @@ in
     nasm
     neovide
     neovim
+    netbeans
     ninja
     nodejs-14_x
     nodePackages.npm
-    # oraclejdk8
-    # oraclejre8
+    jdk8
+    jre8
     postman
     python39Full
     python39Packages.pip
@@ -76,6 +76,7 @@ in
     qtcreator
     rustc
     shc
+    unstable.dotnet-runtime
     unstable.sublime4
     unstable.vscode
     vimHugeX
