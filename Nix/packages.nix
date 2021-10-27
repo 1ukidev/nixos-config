@@ -88,6 +88,7 @@ in
     dosfstools
     dracula-theme
     dunst
+    exa
     exfat
     exfatprogs
     flameshot

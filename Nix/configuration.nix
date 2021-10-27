@@ -205,9 +205,11 @@
       lgit = "git add .; and git commit; and git push";
       lgitf = "git add .; and git commit; and git pull; and git push";
       ga = "git add .";
-      ll = "ls -l";
-      l = "ls -a";
-      la = "ls -la";
+      gp = "git pull";
+      ls = "exa";
+      ll = "exa -l";
+      l = "exa -a";
+      la = "exa -la";
       grep = "rg";
       cgrep = "/run/current-system/sw/bin/grep";
       rmf = "sudo rm -rf";
