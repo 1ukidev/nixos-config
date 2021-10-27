@@ -31,7 +31,7 @@ in
     qutebrowser
     ripcord
     signal-desktop
-    tdesktop
+    unstable.tdesktop
     thunderbird-bin
     # tor-browser-bundle-bin
     unstable.discord
