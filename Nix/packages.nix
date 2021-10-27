@@ -72,6 +72,7 @@ in
     postman
     python39Full
     python39Packages.pip
+    pypy3
     qtcreator
     rustc
     shc
