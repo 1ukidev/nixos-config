@@ -184,14 +184,12 @@ bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
 
 # compositor
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
+bindsym $mod+Shift+u exec --no-startup-id picom --config ~/.config/picom/picom.conf
+bindsym $mod+Shift+i exec --no-startup-id pkill picom
 
 # protonvpn
 bindsym $mod+Shift+f exec --no-startup-id gksudo "protonvpn c -f"
 bindsym $mod+Shift+d exec --no-startup-id gksudo "protonvpn d"
-
-# picom
-bindsym $mod+Shift+u exec --no-startup-id picom --config ~/.config/picom/picom.conf
-bindsym $mod+Shift+i exec --no-startup-id pkill picom
 
 # i3lock
 bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1.jpg
