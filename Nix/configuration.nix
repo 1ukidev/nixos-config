@@ -168,7 +168,7 @@
   hardware.sane.extraBackends = [ pkgs.utsushi ];
 
   # Enable Bluetooth support.
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = false;
   services.blueman.enable = false;
 
   # Enable sound and PulseAudio.
