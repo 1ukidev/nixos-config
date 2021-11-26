@@ -21,18 +21,14 @@ in
     brave
     chromium
     element-desktop
-    firefox-bin
     ipfs
     kodi
     megasync
     ngrok
-    pidgin
     qbittorrent
     qutebrowser
-    ripcord
     signal-desktop
     unstable.tdesktop
-    thunderbird-bin
     # tor-browser-bundle-bin
     unstable.discord
 
@@ -45,6 +41,8 @@ in
     lmms
 
     # Development
+    adoptopenjdk-bin
+    adoptopenjdk-jre-bin
     android-studio
     cargo
     clang_12
@@ -67,8 +65,6 @@ in
     ninja
     nodejs-14_x
     nodePackages.npm
-    jdk8
-    jre8
     postman
     python39Full
     python39Packages.pip
@@ -88,6 +84,7 @@ in
     curl
     dosfstools
     dracula-theme
+    duf
     dunst
     exa
     exfat
