@@ -1,4 +1,4 @@
-## No encryption | Optimized for SSD
+## Unencrypted | Optimized for SSD
 ## Installation:
 ### Become superuser
 ```
