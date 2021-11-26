@@ -162,7 +162,7 @@
   hardware.cpu.intel.updateMicrocode = true;
 
   # Enable print support.
-  services.printing.enable = true;
+  services.printing.enable = false;
   services.printing.drivers = [ pkgs.epson-escpr ];
   hardware.sane.enable = false;
   hardware.sane.extraBackends = [ pkgs.utsushi ];
@@ -187,7 +187,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luki = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" "fuse" "video" "audio" "scanner" "lp" "libvirtd" ];
+    extraGroups = [ "wheel" "video" "audio" "networkmanager" "docker" "fuse" "scanner" "lp" "libvirtd" "kvm" ];
     shell = pkgs.fish;
   };
 
