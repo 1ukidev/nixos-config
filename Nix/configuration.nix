@@ -22,23 +22,23 @@
   
   # Define mount options (only Btrfs).
   fileSystems."/" = {
-    options = [ "subvol=root" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+    options = [ "subvol=root" "noatime" "space_cache=v2" "autodefrag" "discard=async" "compress=zstd" ];
   };
 
   fileSystems."/home" = {
-    options = [ "subvol=home" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+    options = [ "subvol=home" "noatime" "space_cache=v2" "autodefrag" "discard=async" "compress=zstd" ];
   };
 
   fileSystems."/nix" = {
-    options = [ "subvol=nix" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+    options = [ "subvol=nix" "noatime" "space_cache=v2" "autodefrag" "discard=async" "compress=zstd" ];
   };
 
   fileSystems."/var" = {
-    options = [ "subvol=var" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+    options = [ "subvol=var" "noatime" "space_cache=v2" "autodefrag" "discard=async" "compress=zstd" ];
   };
 
   fileSystems."/tmp" = { 
-    options = [ "subvol=tmp" "noatime" "space_cache" "autodefrag" "discard" "compress=zstd" ];
+    options = [ "subvol=tmp" "noatime" "space_cache=v2" "autodefrag" "discard=async" "compress=zstd" ];
   };
   
   # If set, NixOS will enforce the immutability of the Nix store
