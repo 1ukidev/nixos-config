@@ -264,7 +264,7 @@
   };
 
   # Allow ffmpeg installation.
-  nixpkgs.config.permittedInsecurePackages = [ "ffmpeg-3.4.8" ];
+  nixpkgs.config.permittedInsecurePackages = [ "ffmpeg-4.4.1" ];
 
   # Enable VirtualBox and libvird.
   # virtualisation.virtualbox.host.enable = true;
