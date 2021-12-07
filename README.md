@@ -7,7 +7,7 @@
 ## System:
 | Type           | Name                          |
 | -------------  | ----------------------------- |
-| NixOS version  | Okapi (21.05)                 |
+| NixOS version  | 21.11 (Porcupine)             |
 | Shell          | fish                          |
 | Terminal       | kitty                         |
 | Launcher       | Rofi                          |
