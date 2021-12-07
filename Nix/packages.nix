@@ -116,7 +116,7 @@ in
 
     # Video, audio and recording
     cmus
-    ffmpeg-full
+    ffmpeg
     mplayer
     mpv
     obs-studio
