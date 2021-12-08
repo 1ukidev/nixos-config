@@ -34,7 +34,7 @@ cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
 sudo mkdir -p /usr/share/backgrounds
 sudo cp Wallpaper/1.jpg /usr/share/backgrounds
 
-# Update Nix
+# Update Nix channel
 sudo nix-channel --update
 
 # Clean system
