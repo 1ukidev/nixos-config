@@ -168,7 +168,6 @@ in
     neofetch
     nix-tree
     nnn
-    pfetch
     pipes
     pulsemixer
     speedtest-cli
