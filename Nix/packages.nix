@@ -180,7 +180,6 @@ in
 
     # Games
     chiaki
-    pcsx2
     ppsspp
     snes9x-gtk
     unstable.osu-lazer
@@ -235,6 +234,7 @@ in
     bc
     binutils
     bison
+    fakeroot
     file
     findutils
     gawk
