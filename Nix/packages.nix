@@ -44,7 +44,8 @@ in
     cargo
     clang_12
     cmake
-    dotnet-sdk
+    dotnetCorePackages.runtime_5_0
+    dotnet-sdk_5
     emacs
     fritzing
     gcc11
@@ -70,8 +71,6 @@ in
     qtcreator
     rustc
     shc
-    unstable.dotnet-runtime
-    unstable.sublime4
     unstable.vscode
     vimHugeX
     yarn
@@ -93,7 +92,6 @@ in
     kitty
     leafpad
     linuxHeaders
-    linuxPackages_zen.v4l2loopback
     lxappearance
     mtpfs
     nitrogen
@@ -107,6 +105,7 @@ in
     xfce.thunar
     xfce.thunar-archive-plugin
     xfce.thunar-volman
+    udisks
     utillinux
     xarchiver
     xfce.xfce4-power-manager
@@ -117,7 +116,6 @@ in
     ffmpeg
     mplayer
     mpv
-    obs-studio
     simplescreenrecorder
     vlc
 
