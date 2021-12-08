@@ -312,14 +312,7 @@
   #  '';
   # };
   # programs.ncmpcpp.enable = true;
-
-  # Enable dbus, fstrim and thermald.
-  services = {
-    dbus.enable = true;
-    fstrim.enable = true;
-    thermald.enable = true;
-  };
-
+  
   # Enable the firewall.
   networking.firewall.enable = true;
 
