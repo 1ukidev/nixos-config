@@ -19,11 +19,9 @@ in
     # In alphabetic order.
     # Internet
     brave
-    chromium
     element-desktop
     ipfs
     kodi
-    megasync
     ngrok
     qbittorrent
     qutebrowser
