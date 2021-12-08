@@ -163,6 +163,7 @@ in
     elinks
     figlet
     htop
+    intel-gpu-tools
     iotop
     ncdu
     neofetch
