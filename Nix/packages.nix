@@ -22,7 +22,6 @@ in
     element-desktop
     ipfs
     kodi
-    ngrok
     qbittorrent
     qutebrowser
     signal-desktop
@@ -60,13 +59,14 @@ in
     neovide
     neovim
     netbeans
+    ngrok
     ninja
     nodejs-14_x
     nodePackages.npm
     postman
+    pypy3
     python39Full
     python39Packages.pip
-    pypy3
     qtcreator
     rustc
     shc
