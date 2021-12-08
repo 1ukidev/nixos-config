@@ -41,6 +41,7 @@ in
     adoptopenjdk-bin
     adoptopenjdk-jre-bin
     android-studio
+    cabal-install
     cargo
     clang_12
     cmake
