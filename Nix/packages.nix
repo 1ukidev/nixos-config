@@ -45,7 +45,7 @@ in
     cargo
     clang_12
     cmake
-    dotnet-sdk_5
+    dotnet-sdk
     emacs
     fritzing
     gcc11
