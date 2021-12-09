@@ -43,9 +43,9 @@ printf "Cleaning...\nThis may take a while...\n"
 sudo nix-store --optimise
 
 # Compress and defragment subvolumes (only Btrfs)
-printf "\nCompressing and defragmenting /..."
+printf "\nCompressing and defragmenting /...\n"
 sudo btrfs filesystem defragment -r -czstd /
-printf "\nCompressing and defragmenting /home..."
+printf "Compressing and defragmenting /home..."
 sudo btrfs filesystem defragment -r -czstd /home
 printf "\nCompressing and defragmenting /nix...\nThis can take a long time to finish..."
 sudo btrfs filesystem defragment -r -czstd /nix
