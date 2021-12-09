@@ -2,73 +2,73 @@
 ## Installation:
 ### Become superuser
 ```
-sudo -i
+# sudo -i
 ```
 
 ### Load keyboard layout if necessary
 ```
-loadkeys <layout>
+# loadkeys <layout>
 ```
 
 ### Enable Wi-Fi if necessary
 ```
-ifconfig <interface> up
-wpa_passphrase <ssid> <passphrase> >> /etc/wpa_supplicant.conf
-wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant.conf
+# ifconfig <interface> up
+# wpa_passphrase <ssid> <passphrase> >> /etc/wpa_supplicant.conf
+# wpa_supplicant -B -i <interface> -c /etc/wpa_supplicant.conf
 ```
 
 ### Partition disk
 ```
-wipefs -a /dev/sdX
-cfdisk -z /dev/sdX
-mkfs.fat -nBOOT -F 32 /dev/sdXX
-mkfs.btrfs -f -L ROOT /dev/sdXX
-mkswap -L SWAP /dev/sdXX
+# wipefs -a /dev/sdX
+# cfdisk -z /dev/sdX
+# mkfs.fat -nBOOT -F 32 /dev/sdXX
+# mkfs.btrfs -f -L ROOT /dev/sdXX
+# mkswap -L SWAP /dev/sdXX
 ```
 
 ### Mount partitions
 ```
-swapon /dev/sdXX
-BTRFS_OPTS="noatime,space_cache=v2,autodefrag,discard=async,compress=zstd"
-mount -o $BTRFS_OPTS /dev/sdXX /mnt
-btrfs subvolume create /mnt/@
-btrfs subvolume create /mnt/@home
-btrfs subvolume create /mnt/@nix
-btrfs subvolume create /mnt/@var
-btrfs subvolume create /mnt/@tmp
-umount /mnt
-mount -o subvol=@,$BTRFS_OPTS /dev/sdXX /mnt
-mkdir /mnt/home
-mount -o subvol=@home,$BTRFS_OPTS /dev/sdXX /mnt/home
-mkdir /mnt/nix
-mount -o subvol=@nix,$BTRFS_OPTS /dev/sdXX /mnt/nix
-mkdir /mnt/var
-mount -o subvol=@var,$BTRFS_OPTS /dev/sdXX /mnt/var
-mkdir /mnt/tmp
-mount -o subvol=@tmp,$BTRFS_OPTS /dev/sdXX /mnt/tmp
-mkdir -p /mnt/boot/efi
-mount /dev/sdXX /mnt/boot/efi
+# swapon /dev/sdXX
+# BTRFS_OPTS="noatime,space_cache=v2,autodefrag,discard=async,compress=zstd"
+# mount -o $BTRFS_OPTS /dev/sdXX /mnt
+# btrfs subvolume create /mnt/@
+# btrfs subvolume create /mnt/@home
+# btrfs subvolume create /mnt/@nix
+# btrfs subvolume create /mnt/@var
+# btrfs subvolume create /mnt/@tmp
+# umount /mnt
+# mount -o subvol=@,$BTRFS_OPTS /dev/sdXX /mnt
+# mkdir /mnt/home
+# mount -o subvol=@home,$BTRFS_OPTS /dev/sdXX /mnt/home
+# mkdir /mnt/nix
+# mount -o subvol=@nix,$BTRFS_OPTS /dev/sdXX /mnt/nix
+# mkdir /mnt/var
+# mount -o subvol=@var,$BTRFS_OPTS /dev/sdXX /mnt/var
+# mkdir /mnt/tmp
+# mount -o subvol=@tmp,$BTRFS_OPTS /dev/sdXX /mnt/tmp
+# mkdir -p /mnt/boot/efi
+# mount /dev/sdXX /mnt/boot/efi
 ```
 
 ### Generate config
 ```
-nixos-generate-config --root /mnt
+# nixos-generate-config --root /mnt
 ```
 
 ### Download my configuration
 ```
-curl -L -O https://github.com/1ukidev/nixos-config/archive/main.tar.gz
-tar xf main.tar.gz
-cd nixos-config-main/Nix
-cp * /mnt/etc/nixos
+# curl -L -O https://github.com/1ukidev/nixos-config/archive/main.tar.gz
+# tar xf main.tar.gz
+# cd nixos-config-main/Nix
+# cp * /mnt/etc/nixos
 ```
 
 ### Install NixOS
 ```
 *Remove "options" from all "fileSystems" in hardware-configuration.nix*
 *The mount options are defined in configuration.nix*
-nixos-install --cores $(nproc)
-reboot
+# nixos-install --cores $(nproc)
+# reboot
 ```
 
 ## Post-installation:
@@ -76,8 +76,8 @@ reboot
 ```
 *CTRL+ALT+F1*
 *Login as root*
-passwd <user>
-exit
+# passwd <user>
+# exit
 *CTRL+ALT+F7*
 ```
 
@@ -86,12 +86,12 @@ exit
 *Login with your user*
 *Super+Return*
 *Enable Wi-Fi with nmtui if necessary*
-git clone https://github.com/1ukidev/nixos-config
-cd nixos-config
-./pos-install.sh
-cd ../rofi
-./setup.sh
-cd ../polybar-themes
-./setup.sh
-reboot
+# git clone https://github.com/1ukidev/nixos-config
+# cd nixos-config
+# ./pos-install.sh
+# cd ../rofi
+# ./setup.sh
+# cd ../polybar-themes
+# ./setup.sh
+# reboot
 ```
