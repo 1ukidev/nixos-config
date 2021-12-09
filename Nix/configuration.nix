@@ -65,6 +65,7 @@
       enable = true;
       version = 2;
       efiSupport = true;
+      enableCryptodisk = true;
       efiInstallAsRemovable = true;
       device = "nodev";
     };
@@ -75,8 +76,8 @@
   networking.networkmanager.enable = true; # Enable NetworkManager.
 
   # Define DNS.
-  networking.networkmanager.insertNameservers = [ "8.8.8.8" "8.8.4.4" ];
-  networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
+  networking.networkmanager.insertNameservers = [ "1.1.1.1" "1.0.0.1" ];
+  networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
