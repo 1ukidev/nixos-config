@@ -89,6 +89,7 @@
 # git clone https://github.com/1ukidev/nixos-config
 # cd nixos-config
 # ./pos-install.sh
+*Optional*
 # cd ../rofi
 # ./setup.sh
 # cd ../polybar-themes
