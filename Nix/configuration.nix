@@ -294,7 +294,7 @@
     permitRootLogin = "no";
     ports = [ 2222 ];
     extraConfig = ''
-      MaxAuthTries 2
+      MaxAuthTries 3
     '';
   };
 
