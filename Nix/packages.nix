@@ -115,7 +115,6 @@ in
     # Video, audio and recording
     cmus
     ffmpeg
-    mplayer
     mpv
     simplescreenrecorder
     vlc
@@ -207,8 +206,7 @@ in
  
     # Libs
     glibc
-    gnome.gvfs
-    libcaca
+    gvfs
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins
