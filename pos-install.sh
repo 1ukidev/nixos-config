@@ -12,7 +12,7 @@ git clone --depth=1 https://github.com/adi1090x/rofi $HOME/rofi
 chmod +x $HOME/rofi/setup.sh 
 
 # Setup i3
-cp Configs/i3-config $HOME/.config/i3/config
+cp Configs/i3config $HOME/.config/i3/config
 
 # Setup kitty
 mkdir -p $HOME/.config/kitty
