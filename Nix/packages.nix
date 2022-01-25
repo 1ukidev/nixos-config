@@ -18,8 +18,8 @@ in
   environment.systemPackages = with pkgs; [
     # In alphabetic order.
     # Internet
-    brave
     element-desktop
+    google-chrome
     ipfs
     kodi
     qbittorrent
@@ -33,9 +33,7 @@ in
     audacity-gtk3
     blender
     gimp-with-plugins
-    inkscape-with-extensions
     kdenlive
-    lmms
 
     # Development
     adoptopenjdk-bin
