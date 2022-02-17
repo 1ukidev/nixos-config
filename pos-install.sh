@@ -27,8 +27,10 @@ mkdir -p $HOME/.config/dunst
 cp Configs/dunstrc $HOME/.config/dunst
 
 # Move wallpaper to ~/Pictures/Wallpapers
-mkdir -p $HOME/Pictures/Wallpapers
-cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
+# mkdir -p $HOME/Pictures/Wallpapers
+# cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
+mkdir -p $HOME/Imagens/Wallpapers
+cp Wallpaper/1.jpg $HOME/Imagens/Wallpapers
 
 # Move wallpaper to /usr/share/backgrounds
 sudo mkdir -p /usr/share/backgrounds
