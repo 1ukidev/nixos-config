@@ -179,7 +179,7 @@ in
     chiaki
     ppsspp
     snes9x-gtk
-    unstable.osu-lazer
+    # unstable.osu-lazer
 
     # Text
     libreoffice-fresh
