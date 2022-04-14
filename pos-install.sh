@@ -18,10 +18,6 @@ cp Configs/i3config $HOME/.config/i3/config
 mkdir -p $HOME/.config/kitty
 cp Configs/kitty.conf $HOME/.config/kitty
 
-# Setup picom
-mkdir -p $HOME/.config/picom
-cp Configs/picom.conf $HOME/.config/picom
-
 # Setup Dunst
 mkdir -p $HOME/.config/dunst
 cp Configs/dunstrc $HOME/.config/dunst
