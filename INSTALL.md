@@ -1,4 +1,4 @@
-## Unencrypted | Optimized for SSD
+## Unencrypted / Optimized for SSD
 ## Installation:
 ### Become superuser
 ```
@@ -21,7 +21,7 @@
 ```
 # wipefs -a /dev/sdX
 # cfdisk -z /dev/sdX
-# mkfs.fat -nBOOT -F 32 /dev/sdXX
+# mkfs.fat -nEFI -F32 /dev/sdXX
 # mkfs.btrfs -f -L ROOT /dev/sdXX
 # mkswap -L SWAP /dev/sdXX
 ```
@@ -38,15 +38,11 @@
 # btrfs subvolume create /mnt/@tmp
 # umount /mnt
 # mount -o subvol=@,$BTRFS_OPTS /dev/sdXX /mnt
-# mkdir /mnt/home
+# mkdir -p /mnt/{home,nix,var,tmp,boot/efi}
 # mount -o subvol=@home,$BTRFS_OPTS /dev/sdXX /mnt/home
-# mkdir /mnt/nix
 # mount -o subvol=@nix,$BTRFS_OPTS /dev/sdXX /mnt/nix
-# mkdir /mnt/var
 # mount -o subvol=@var,$BTRFS_OPTS /dev/sdXX /mnt/var
-# mkdir /mnt/tmp
 # mount -o subvol=@tmp,$BTRFS_OPTS /dev/sdXX /mnt/tmp
-# mkdir -p /mnt/boot/efi
 # mount /dev/sdXX /mnt/boot/efi
 ```
 
@@ -89,10 +85,5 @@
 # git clone https://github.com/1ukidev/nixos-config
 # cd nixos-config
 # ./pos-install.sh
-*Optional*
-# cd ../rofi
-# ./setup.sh
-# cd ../polybar-themes
-# ./setup.sh
 # reboot
 ```
