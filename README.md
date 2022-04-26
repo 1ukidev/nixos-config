@@ -2,6 +2,7 @@
   
 # NixOS configurations
 ## Personal configurations of NixOS.
+## For now without home-manager.
 ![Screenshot](screenshot.png)
 
 ## System:
