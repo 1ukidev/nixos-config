@@ -76,6 +76,7 @@ in
 
     # System
     aria
+    bat
     coreutils-full
     curl
     dosfstools
