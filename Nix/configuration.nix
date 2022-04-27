@@ -44,6 +44,7 @@
   # If set, NixOS will enforce the immutability of the Nix store
   # by making /nix/store a read-only bind mount.
   # Nix will automatically make the store writable when needed.
+  # I leave it disabled only initially, due to Btrfs compression.
   nix.readOnlyStore = false;
 
   # Set CPUFreq governor.
