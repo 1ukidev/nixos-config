@@ -43,8 +43,8 @@ in
     cargo
     clang_12
     cmake
-    dotnetCorePackages.runtime_5_0
-    dotnet-sdk_5
+    dotnet-runtime
+    dotnet-sdk
     emacs
     fritzing
     gcc11
