@@ -41,7 +41,7 @@ in
     android-studio
     cabal-install
     cargo
-    clang_12
+    clang_14
     cmake
     dotnet-runtime
     dotnet-sdk
@@ -61,17 +61,16 @@ in
     netbeans
     ngrok
     ninja
-    nodejs-14_x
+    nodejs-16_x
     nodePackages.npm
     postman
     pypy3
-    python39Full
-    python39Packages.pip
+    python310Full
+    python310Packages.pip
     qtcreator
     rustc
     shc
     unstable.vscode
-    vimHugeX
     yarn
 
     # System
@@ -153,6 +152,7 @@ in
     # CLI/TUI tools and some useless packages
     bpytop
     btrfsProgs
+    cava
     cmatrix
     compsize
     cpufetch
@@ -175,6 +175,7 @@ in
     tree
     tty-clock
     youtube-dl
+    yt-dlp
 
     # Games
     chiaki
@@ -199,9 +200,10 @@ in
 
     # Virtualization
     docker
+    gnome.gnome-boxes
+    podman
     qemu
     qemu-utils
-    virt-manager
  
     # Libs
     glibc
@@ -209,10 +211,9 @@ in
     libopus
     libsForQt5.full
     libsForQt5.qtstyleplugins
-    libvirt
     libvorbis
     libvpx
-    llvm_12
+    llvm_14
     python39Packages.pygame
     x264
     x265
