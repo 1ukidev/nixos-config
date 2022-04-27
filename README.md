@@ -2,11 +2,12 @@
   
 # NixOS configurations
 ## Personal configurations of NixOS.
-## For now without home-manager.
 ![Screenshot](screenshot.png)
 
 ## System:
-| Type           | Name                          |
+**For now without home-manager and Flakes**
+  
+| Category       | Name                          |
 | -------------  | ----------------------------- |
 | NixOS version  | 21.11 (Porcupine)             |
 | Shell          | fish                          |
@@ -19,12 +20,14 @@
 | Notifications  | Dunst                         |
 
 ## Themes:
-| Type           | Name                          |
+| Category       | Name                          |
 | -------------  | ----------------------------- |
 | GTK Theme      | Dracula                       |
-| GTK Icon Theme | Papirus                       |
-| Terminal Font  | JetBrains Mono Nerd Font      |
+| GTK Icon theme | Papirus                       |
+| Terminal font  | JetBrains Mono Nerd Font      |
+  
 ---
+  
 ### [configuration.nix](Nix/configuration.nix)
 ### [INSTALL.md](INSTALL.md)
 
