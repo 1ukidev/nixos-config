@@ -32,8 +32,8 @@ in
     # Production
     audacity-gtk3
     blender
-    gimp-with-plugins
     kdenlive
+    krita
 
     # Development
     adoptopenjdk-bin
