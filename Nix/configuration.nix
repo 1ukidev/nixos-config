@@ -72,7 +72,7 @@
     };
   };
 
-  networking.hostName = "LuKi-NixOS"; # Define your hostname.
+  networking.hostName = "v060br"; # Define your hostname.
   networking.wireless.enable = false; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Enable NetworkManager.
 
