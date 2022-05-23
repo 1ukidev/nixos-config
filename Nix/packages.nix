@@ -174,7 +174,6 @@ in
     tokei
     tree
     tty-clock
-    youtube-dl
     yt-dlp
 
     # Games
