@@ -65,8 +65,8 @@ in
     nodePackages.npm
     postman
     pypy3
-    python310Full
-    python310Packages.pip
+    python39Full
+    python39Packages.pip
     qtcreator
     rustc
     shc
