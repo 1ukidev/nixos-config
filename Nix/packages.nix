@@ -55,15 +55,14 @@ in
     gnumake
     go
     google-cloud-sdk
+    lldb_14
     nasm
-    neovide
     neovim
     netbeans
     ngrok
     ninja
     nodejs-16_x
     nodePackages.npm
-    postman
     pypy3
     python39Full
     python39Packages.pip
