@@ -128,9 +128,6 @@
   # Enable qt5ct to set the qt5 theme.
   programs.qt5ct.enable = true;
 
-  # Enable dconf.
-  programs.dconf.enable = true;
-
   # Set keymap in X11.
   services.xserver.layout = "br";
 
