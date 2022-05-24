@@ -129,6 +129,7 @@ in
     hdparm
     keynav
     killall
+    linuxKernel.packages.linux_zen.cpupower
     lm_sensors
     lolcat
     scrcpy
