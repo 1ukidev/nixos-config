@@ -47,28 +47,37 @@
   # I leave it disabled only initially, due to Btrfs compression.
   nix.readOnlyStore = false;
 
-  # Set CPUFreq governor.
+  # Set CPU frequency.
   powerManagement = {
     enable = true;
     powertop.enable = false;
     cpuFreqGovernor = "performance";
   };
-
-  # Use GRUB 2 bootloader.
+  
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "performance";
+      CPU_SCALING_MIN_FREQ_ON_AC = 2700000;
+      CPU_SCALING_MAX_FREQ_ON_AC = 2700000;
+      CPU_SCALING_MIN_FREQ_ON_BAT = 2700000;
+      CPU_SCALING_MAX_FREQ_ON_BAT = 2700000;
+    };
+  };
+  
+  boot.kernelParams = [ "intel_pstate=disable" ];
+  
+  # Use systemd-boot.
   boot.loader = {
     timeout = 1;
     efi = {
-      canTouchEfiVariables = false;
+      canTouchEfiVariables = true;
       efiSysMountPoint = "/boot/efi";
     };
     
-    grub = {
+    systemd-boot = {
       enable = true;
-      version = 2;
-      efiSupport = true;
-      enableCryptodisk = true;
-      efiInstallAsRemovable = true;
-      device = "nodev";
     };
   };
 
