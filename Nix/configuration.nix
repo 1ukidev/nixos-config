@@ -220,6 +220,7 @@ in
       sysrsgit = "sysrs -I nixpkgs=/home/$USER/nixpkgs";
       sysupgit = "sysup -I nixpkgs=/home/$USER/nixpkgs";
       sysclean = "sudo nix-collect-garbage -d; and sudo nix-store --optimise";
+      homers = "home-manager switch"
       search = "nix search";
       nixconfig = "sudo nvim /etc/nixos/configuration.nix";
       lgit = "git add .; and git commit; and git push";
