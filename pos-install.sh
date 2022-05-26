@@ -5,26 +5,17 @@ set -e
 # Create user folders
 xdg-user-dirs-update
 
-# Download polybar-themes and rofi (credits for adi1090x)
+# Clone polybar-themes (credits for adi1090x)
 git clone --depth=1 https://github.com/adi1090x/polybar-themes.git $HOME/polybar-themes
 chmod +x $HOME/polybar-themes/setup.sh
-git clone --depth=1 https://github.com/adi1090x/rofi $HOME/rofi
-chmod +x $HOME/rofi/setup.sh 
-
-# Setup i3
-cp Configs/i3config $HOME/.config/i3/config
-
-# Setup kitty
-mkdir -p $HOME/.config/kitty
-cp Configs/kitty.conf $HOME/.config/kitty
 
 # Setup Dunst
 mkdir -p $HOME/.config/dunst
 cp Configs/dunstrc $HOME/.config/dunst
 
 # Move wallpaper to ~/Pictures/Wallpapers
-# mkdir -p $HOME/Pictures/Wallpapers
-# cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
+#mkdir -p $HOME/Pictures/Wallpapers
+#cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
 mkdir -p $HOME/Imagens/Wallpapers
 cp Wallpaper/1.jpg $HOME/Imagens/Wallpapers
 
@@ -34,6 +25,10 @@ sudo cp Wallpaper/1.jpg /usr/share/backgrounds
 
 # Update Nix channel
 sudo nix-channel --update
+
+# Setup home-manager
+cp -r nixpkgs $HOME/.config/
+home-manager switch
 
 # Clean system
 sudo nix-collect-garbage -d

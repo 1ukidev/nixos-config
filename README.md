@@ -5,8 +5,6 @@
 ![Screenshot](screenshot.png)
 
 ## System:
-**For now without home-manager and Flakes**
-  
 | Category       | Name                          |
 | -------------  | ----------------------------- |
 | NixOS version  | 21.11 (Porcupine)             |

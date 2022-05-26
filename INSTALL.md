@@ -89,8 +89,6 @@
 
 ```
 *Optional*
-# cd ../rofi
-# ./setup.sh
 # cd ../polybar-themes
 # ./setup.sh
 ```
