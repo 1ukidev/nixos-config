@@ -160,10 +160,10 @@
       client.background       #F8F8F2
 
       # bc
-       bindsym $mod+b exec kitty -e bc --quiet
+      bindsym $mod+b exec kitty -e bc --quiet
 
       # polybar
-      exec --no-startup-id ~/.config/polybar/launch.sh --material
+      # exec --no-startup-id ~/.config/polybar/launch.sh --material
       bindsym $mod+Shift+p exec --no-startup-id pkill polybar
       bindsym $mod+Shift+o exec --no-startup-id ~/.config/polybar/launch.sh --material
 
@@ -190,9 +190,7 @@
       bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
 
       # compositor
-      #exec --no-startup-id picom --config ~/.config/picom/picom.conf
-      #exec --no-startup-id picom --experimental-backends --backend glx --vsync
-      #bindsym $mod+Shift+u exec --no-startup-id picom --config ~/.config/picom/picom.conf
+      exec --no-startup-id picom --experimental-backends --backend glx --vsync
       bindsym $mod+Shift+u exec --no-startup-id picom --experimental-backends --backend glx --vsync
       bindsym $mod+Shift+i exec --no-startup-id pkill picom
 
@@ -201,6 +199,7 @@
       bindsym $mod+Shift+d exec --no-startup-id gksudo "protonvpn d"
 
       # i3lock
+      #bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Imagens/Pictures/1.jpg
       bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Imagens/Wallpapers/1.jpg
 
       # power manager

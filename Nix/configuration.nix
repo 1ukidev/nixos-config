@@ -2,12 +2,19 @@
 
 { config, pkgs, ... }:
 
+# home-manager
+let
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz";
+in
+
 {
   imports = [ 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     # Include the packages that will be installed.
     ./packages.nix
+    # home-manager
+    (import "${home-manager}/nixos")
   ];
 
   # Enable unfree packages.
@@ -178,7 +185,7 @@
   hardware.sane.extraBackends = [ pkgs.utsushi ];
 
   # Enable Bluetooth support.
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = false;
   services.blueman.enable = false;
 
   # Enable sound and PulseAudio.
@@ -200,6 +207,9 @@
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "docker" "fuse" "scanner" "lp" "libvirtd" "kvm" ];
     shell = pkgs.fish;
   };
+  
+  home-manager.users.luki = { pkgs, ... }: {
+  };
 
   # Configure fish.
   programs.fish = {
@@ -216,14 +226,17 @@
       lgitf = "git add .; and git commit; and git pull; and git push";
       ga = "git add .";
       gp = "git pull";
-      ls = "exa";
-      ll = "exa -l";
-      l = "exa -a";
-      la = "exa -la";
+      ls = "exa --icons";
+      sl = "exa --icons";
+      ll = "exa -l --icons";
+      l = "exa -a --icons";
+      la = "exa -la --icons";
       grep = "rg";
       cgrep = "/run/current-system/sw/bin/grep";
       rmf = "sudo rm -rf";
       cp = "cp -i";
+      cat = "bat --theme Dracula";
+      less = "bat --theme Dracula";
     };
 
     shellInit = ''
@@ -297,7 +310,7 @@
 
   # Enable the OpenSSH daemon.
   services.openssh = {
-    enable = true;
+    enable = false;
     permitRootLogin = "no";
     ports = [ 2222 ];
     extraConfig = ''

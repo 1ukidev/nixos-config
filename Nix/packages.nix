@@ -87,6 +87,7 @@ in
     flameshot
     fuse
     gparted
+    home-manager
     kitty
     leafpad
     linuxHeaders
