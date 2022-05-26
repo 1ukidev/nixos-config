@@ -46,7 +46,7 @@
 # mount /dev/sdXX /mnt/boot/efi
 ```
 
-### Generate config
+### Generate configuration
 ```
 # nixos-generate-config --root /mnt
 ```
