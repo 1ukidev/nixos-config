@@ -28,6 +28,7 @@
   
 ### [configuration.nix](Nix/configuration.nix)
 ### [packages.nix](Nix/packages.nix)
+### [home.nix](nixpkgs/home.nix)
 ### [INSTALL.md](INSTALL.md)
 
 </div>
