@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   home = {
     file.".config/kitty/kitty.conf".text = ''

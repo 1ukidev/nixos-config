@@ -7,6 +7,10 @@
     # ./gui/dunst.nix
   ];
 
+  home.username = "luki";
+  home.homeDirectory = "/home/luki";
+  home.stateVersion = "21.05";
+
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
@@ -20,4 +24,5 @@
       commit.gpgsign = "true";
     };
   };
+
 }

@@ -208,9 +208,6 @@ in
     shell = pkgs.fish;
   };
   
-  home-manager.users.luki = { pkgs, ... }: {
-  };
-
   # Configure fish.
   programs.fish = {
     enable = true;
