@@ -51,7 +51,6 @@ in
     gdb
     gh
     ghc
-    gitFull
     gnumake
     go
     google-cloud-sdk

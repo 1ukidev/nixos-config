@@ -9,6 +9,7 @@
 
   programs.git = {
     enable = true;
+    package = pkgs.gitFull;
     userName  = "LuKi / Leonardo";
     userEmail = "leo.monteiro06@live.com";
 
