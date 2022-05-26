@@ -8,6 +8,7 @@
   ];
 
   programs.git = {
+    enable = true;
     userName  = "LuKi / Leonardo";
     userEmail = "leo.monteiro06@live.com";
 
