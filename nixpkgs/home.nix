@@ -22,6 +22,7 @@
       credential.helper = "store";
       user.signingkey = "F0258C27407E9095";
       commit.gpgsign = "true";
+      core.editor = "emacs";
     };
   };
 

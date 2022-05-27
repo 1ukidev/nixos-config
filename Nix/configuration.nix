@@ -54,6 +54,11 @@ in
   # I leave it disabled only initially, due to Btrfs compression.
   nix.readOnlyStore = false;
 
+  # Set vm.swappiness to 100
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 100;
+  };
+
   # Set CPU frequency.
   powerManagement = {
     enable = true;
@@ -155,10 +160,6 @@ in
   # Enable support for Intel hybrid codec and NUR.
   nixpkgs.config.packageOverrides = pkgs: {
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-    nur = import (builtins.fetchTarball
-      "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-        inherit pkgs;
-      };
   };
 
   # Enable OpenGL and accelerated video playback.

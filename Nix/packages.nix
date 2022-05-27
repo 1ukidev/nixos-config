@@ -45,7 +45,7 @@ in
     cmake
     dotnet-runtime
     dotnet-sdk
-    emacs
+    unstable.emacs
     fritzing
     gcc11
     gdb
@@ -67,6 +67,7 @@ in
     python39Packages.pip
     qtcreator
     rustc
+    scenebuilder
     shc
     unstable.vscode
     yarn
@@ -212,6 +213,7 @@ in
     libsForQt5.qtstyleplugins
     libvorbis
     libvpx
+    openjfx11
     llvm_14
     python39Packages.pygame
     x264
