@@ -151,7 +151,7 @@ in
     xsane
 
     # CLI/TUI tools and some useless packages
-    bpytop
+    btop
     btrfsProgs
     cava
     cmatrix
