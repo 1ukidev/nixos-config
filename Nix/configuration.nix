@@ -157,7 +157,7 @@ in
   services.xserver.useGlamor = true;
   services.xserver.libinput.enable = true;
   
-  # Enable support for Intel hybrid codec and NUR.
+  # Enable support for Intel hybrid codec.
   nixpkgs.config.packageOverrides = pkgs: {
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
   };
