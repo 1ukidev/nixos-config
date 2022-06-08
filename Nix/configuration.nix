@@ -2,7 +2,6 @@
 
 { config, pkgs, ... }:
 
-# home-manager
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz";
 in
@@ -13,7 +12,7 @@ in
     ./hardware-configuration.nix
     # Include the packages that will be installed.
     ./packages.nix
-    # home-manager
+    # Include home-manager
     (import "${home-manager}/nixos")
   ];
 
