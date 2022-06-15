@@ -7,7 +7,7 @@
 ## System:
 | Category       | Name                          |
 | -------------  | ----------------------------- |
-| NixOS version  | 21.11 (Porcupine)             |
+| NixOS version  | 22.05 (Quokka)                |
 | Shell          | fish                          |
 | Terminal       | kitty                         |
 | Launcher       | Rofi                          |

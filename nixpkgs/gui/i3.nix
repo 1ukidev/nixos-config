@@ -165,9 +165,6 @@
       bindsym $mod+Shift+p exec --no-startup-id pkill polybar
       bindsym $mod+Shift+o exec --no-startup-id ~/.config/polybar/launch.sh --material
 
-      # mouse sensitivity
-      # exec --no-startup-id xinput set-prop "Logitech Wireless Mouse" "Coordinate Transformation Matrix" 0.8 0 0 0 0.8 0 0 0 1
-
       # hide mouse
       exec --no-startup-id xbanish
 
@@ -192,12 +189,8 @@
       bindsym $mod+Shift+u exec --no-startup-id picom --experimental-backends --backend glx --vsync
       bindsym $mod+Shift+i exec --no-startup-id pkill picom
 
-      # protonvpn
-      bindsym $mod+Shift+f exec --no-startup-id gksudo "protonvpn c -f"
-      bindsym $mod+Shift+d exec --no-startup-id gksudo "protonvpn d"
-
       # i3lock
-      #bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Imagens/Pictures/1.jpg
+      #bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1.jpg
       bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Imagens/Wallpapers/1.jpg
 
       # power manager

@@ -51,6 +51,7 @@ in
     gdb
     gh
     ghc
+    git
     gnumake
     go
     google-cloud-sdk
@@ -126,7 +127,6 @@ in
     cron
     fd
     flex
-    gksu
     hdparm
     keynav
     killall
@@ -152,7 +152,7 @@ in
 
     # CLI/TUI tools and some useless packages
     btop
-    btrfsProgs
+    btrfs-progs
     cava
     cmatrix
     compsize

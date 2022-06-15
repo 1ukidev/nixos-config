@@ -43,7 +43,7 @@
 # mount -o subvol=@nix,$BTRFS_OPTS /dev/sdXX /mnt/nix
 # mount -o subvol=@var,$BTRFS_OPTS /dev/sdXX /mnt/var
 # mount -o subvol=@tmp,$BTRFS_OPTS /dev/sdXX /mnt/tmp
-# mount /dev/sdXX /mnt/boot/efi
+# mount -o noatime /dev/sdXX /mnt/boot/efi
 ```
 
 ### Generate configuration

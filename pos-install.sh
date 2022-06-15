@@ -27,6 +27,7 @@ sudo cp Wallpaper/1.jpg /usr/share/backgrounds
 sudo nix-channel --update
 
 # Setup home-manager
+rm $HOME/.config/i3/config
 cp -r nixpkgs $HOME/.config/
 home-manager switch
 
