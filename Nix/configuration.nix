@@ -204,7 +204,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luki = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "video" "audio" "networkmanager" "docker" "fuse" "scanner" "lp" "libvirtd" "kvm" ];
+    extraGroups = [ "wheel" "video" "audio" "networkmanager" "fuse" "scanner" "lp" "libvirtd" "kvm" ];
     shell = pkgs.fish;
   };
   
@@ -315,9 +315,6 @@ in
       MaxAuthTries 3
     '';
   };
-
-  # Enable Docker.
-  virtualisation.docker.enable = false;
  
   # Enable MPD.
   # services.mpd = {
