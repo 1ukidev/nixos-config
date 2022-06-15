@@ -199,7 +199,6 @@ in
     wireshark
 
     # Virtualization
-    docker
     gnome.gnome-boxes
     podman
     qemu
