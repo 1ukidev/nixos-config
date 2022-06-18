@@ -12,7 +12,7 @@
 | Terminal       | kitty                         |
 | Launcher       | Rofi                          |
 | Filesystem     | Btrfs (with zstd compression) |
-| Bootloader     | GRUB (with UEFI)              |
+| Bootloader     | systemd-boot                  |
 | Window manager | i3                            |
 | Compositor     | picom                         |
 | Notifications  | Dunst                         |
