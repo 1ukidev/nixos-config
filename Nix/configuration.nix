@@ -1,9 +1,9 @@
-# NixOS 21.11 config - 1ukidev
+# NixOS 22.05 config - 1ukidev
 
 { config, pkgs, ... }:
 
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-21.11.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz";
 in
 
 {
