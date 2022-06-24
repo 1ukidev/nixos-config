@@ -1,4 +1,4 @@
-# NixOS 21.11 packages - 1ukidev
+# NixOS 22.05 packages - 1ukidev
 
 { config, pkgs, ... }:
 
