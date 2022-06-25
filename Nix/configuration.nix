@@ -235,6 +235,9 @@ in
       cp = "cp -i";
       cat = "bat --theme Dracula";
       less = "bat --theme Dracula";
+      e = "emacs -nw";
+      de = "distrobox-enter";
+      ds = "distrobox-stop";
     };
 
     shellInit = ''

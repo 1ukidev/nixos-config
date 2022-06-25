@@ -44,8 +44,6 @@ in
     clang_14
     cmake
     distrobox
-    dotnet-runtime
-    dotnet-sdk
     unstable.emacs
     fritzing
     gcc12
@@ -60,7 +58,6 @@ in
     lldb_14
     nasm
     neovim
-    netbeans
     ngrok
     ninja
     nodejs-16_x
@@ -163,7 +160,6 @@ in
     cmatrix
     compsize
     cpufetch
-    drive
     elinks
     figlet
     htop
@@ -205,8 +201,7 @@ in
     wireshark
 
     # Virtualization
-    gnome.gnome-boxes
-    podman
+    unstable.gnome.gnome-boxes
     qemu
     qemu-utils
  
@@ -218,7 +213,6 @@ in
     libsForQt5.qtstyleplugins
     libvorbis
     libvpx
-    openjfx11
     llvm_14
     python39Packages.pygame
     x264

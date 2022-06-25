@@ -184,6 +184,9 @@
       # set keyboard repeat delay and rate
       exec --no-startup-id xset r rate 275 45
 
+      # start arch container (distrobox)
+      # exec --no-startup-id distrobox enter arch -- uname -n
+
       # suspend
       bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
 
