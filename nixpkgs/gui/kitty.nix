@@ -19,6 +19,9 @@
       # Cursor
       cursor_shape beam 
       cursor_blink_interval 0
+      
+      # Disable confirmation to close the window 
+      confirm_os_window_close 0
 
       # Dracula color scheme
       foreground            #f8f8f2

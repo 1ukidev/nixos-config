@@ -77,7 +77,7 @@ in
     };
   };
   
-  boot.kernelParams = [ "intel_pstate=disable" ];
+  boot.kernelParams = [ "intel_pstate=disable" "mitigations=off" ];
   
   # Use systemd-boot.
   boot.loader = {
@@ -292,7 +292,10 @@ in
   # virtualisation.virtualbox.host.enableExtensionPack = true;
   # users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
   virtualisation.libvirtd.enable = false;
-  
+ 
+  # Enable podman
+  virtualisation.podman.enable = true;
+
   # Enable the Android Debug Bridge.
   programs.adb.enable = true;
 
@@ -315,7 +318,7 @@ in
       MaxAuthTries 3
     '';
   };
- 
+
   # Enable MPD.
   # services.mpd = {
   #   enable = true;
@@ -336,6 +339,14 @@ in
   networking.firewall.allowedTCPPorts = [ 2222 631 ];
   networking.firewall.allowedUDPPorts = [ 2222 631 ];
   
+  # Others services.
+  services = {
+    fstrim.enable = true;
+    udisks2.enable = true;
+    upower.enable = true;
+    gnome.gnome-keyring.enable = true;
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

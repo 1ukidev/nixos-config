@@ -181,12 +181,15 @@
       # exec --no-startup-id xrandr --output HDMI-1 --set "Broadcast RGB" "Full"
       # exec --no-startup-id xrandr --output eDP-1 --right-of HDMI-1
 
+      # set keyboard repeat delay and rate
+      exec --no-startup-id xset r rate 275 45
+
       # suspend
       bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
 
       # compositor
-      exec --no-startup-id picom --experimental-backends --backend glx --vsync
-      bindsym $mod+Shift+u exec --no-startup-id picom --experimental-backends --backend glx --vsync
+      exec --no-startup-id picom --backend glx --vsync
+      bindsym $mod+Shift+u exec --no-startup-id picom --backend glx --vsync
       bindsym $mod+Shift+i exec --no-startup-id pkill picom
 
       # i3lock

@@ -43,14 +43,16 @@ in
     cargo
     clang_14
     cmake
+    distrobox
     dotnet-runtime
     dotnet-sdk
     unstable.emacs
     fritzing
-    gcc11
+    gcc12
     gdb
     gh
     ghc
+    ghidra-bin
     git
     gnumake
     go
@@ -93,6 +95,7 @@ in
     leafpad
     linuxHeaders
     lxappearance
+    lxqt.lxqt-sudo
     mtpfs
     nitrogen
     okular
@@ -106,10 +109,12 @@ in
     xfce.thunar-archive-plugin
     xfce.thunar-volman
     udisks
+    upower
     utillinux
     xarchiver
     xfce.xfce4-power-manager
     xorg.xbacklight
+    xorg.xhost
 
     # Video, audio and recording
     cmus
@@ -127,6 +132,7 @@ in
     cron
     fd
     flex
+    hakuneko
     hdparm
     keynav
     killall
