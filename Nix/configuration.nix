@@ -122,7 +122,7 @@ in
     enable = true;
     displayManager = {
       lightdm.enable = true;
-      lightdm.background = "/usr/share/backgrounds/1.jpg";
+      lightdm.background = "/usr/share/backgrounds/1.png";
       lightdm.greeters.gtk = {
         enable = true;
         theme = { name = "Dracula"; };

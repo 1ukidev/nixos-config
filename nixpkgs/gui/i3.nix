@@ -196,8 +196,8 @@
       bindsym $mod+Shift+i exec --no-startup-id pkill picom
 
       # i3lock
-      #bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1.jpg
-      bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Imagens/Wallpapers/1.jpg
+      #bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Pictures/Wallpapers/1.png
+      bindsym $mod+Shift+y exec --no-startup-id i3lock -i ~/Imagens/Wallpapers/1.png
 
       # power manager
       exec --no-startup-id xfce4-power-manager

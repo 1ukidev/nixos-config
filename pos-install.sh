@@ -15,13 +15,13 @@ cp Configs/dunstrc $HOME/.config/dunst
 
 # Move wallpaper to ~/Pictures/Wallpapers
 #mkdir -p $HOME/Pictures/Wallpapers
-#cp Wallpaper/1.jpg $HOME/Pictures/Wallpapers
+#cp Wallpaper/1.png $HOME/Pictures/Wallpapers
 mkdir -p $HOME/Imagens/Wallpapers
-cp Wallpaper/1.jpg $HOME/Imagens/Wallpapers
+cp Wallpaper/1.png $HOME/Imagens/Wallpapers
 
 # Move wallpaper to /usr/share/backgrounds
 sudo mkdir -p /usr/share/backgrounds
-sudo cp Wallpaper/1.jpg /usr/share/backgrounds
+sudo cp Wallpaper/1.png /usr/share/backgrounds
 
 # Update Nix channel
 sudo nix-channel --update
