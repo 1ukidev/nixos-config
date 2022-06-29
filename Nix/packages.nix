@@ -44,6 +44,7 @@ in
     clang_14
     cmake
     distrobox
+    diff-so-fancy
     unstable.emacs
     fritzing
     gcc12
@@ -80,38 +81,33 @@ in
     dosfstools
     dracula-theme
     duf
-    dunst
     exa
     exfat
     exfatprogs
     flameshot
     fuse
-    gparted
+    gnome.gnome-tweaks
     home-manager
     kitty
-    leafpad
     linuxHeaders
-    lxappearance
     lxqt.lxqt-sudo
-    mtpfs
-    nitrogen
-    okular
     papirus-icon-theme
-    pavucontrol
-    picom
+    pciutils
     ripgrep
     srm
-    sxiv
-    xfce.thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-volman
     udisks
     upower
     utillinux
-    xarchiver
-    xfce.xfce4-power-manager
-    xorg.xbacklight
     xorg.xhost
+
+    # Gnome extensions
+    gnomeExtensions.appindicator
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.alphabetical-app-grid
+    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.caffeine
+    gnomeExtensions.places-status-indicator
+    gnomeExtensions.openweather
 
     # Video, audio and recording
     cmus
@@ -125,7 +121,6 @@ in
     anki
     appimage-run
     calibre
-    cool-retro-term
     cron
     fd
     flex
@@ -182,7 +177,7 @@ in
     # Games
     chiaki
     ppsspp
-    snes9x-gtk
+    # snes9x-gtk
     # unstable.osu-lazer
 
     # Text
@@ -197,11 +192,11 @@ in
     dig
     nmap
     protonvpn-cli
-    veracrypt
+    # veracrypt
     wireshark
 
     # Virtualization
-    unstable.gnome.gnome-boxes
+    gnome.gnome-boxes
     qemu
     qemu-utils
  

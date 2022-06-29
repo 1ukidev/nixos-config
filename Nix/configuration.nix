@@ -117,36 +117,31 @@ in
     keyMap = "br-abnt2";
   };
 
-  # Enable X11, LightDM, i3 and XMonad.
+  # Enable GDM and GNOME.
   services.xserver = {
     enable = true;
     displayManager = {
-      lightdm.enable = true;
-      lightdm.background = "/usr/share/backgrounds/1.png";
-      lightdm.greeters.gtk = {
-        enable = true;
-        theme = { name = "Dracula"; };
-      };
-      defaultSession = "none+i3";
+      gdm.enable = true;
     };
-    
-    windowManager.i3 = {
-      enable = true;
-      package = pkgs.i3-gaps;
-      extraPackages = with pkgs; [ rofi polybarFull i3lock ];
-    };
-    
-    windowManager.xmonad = {
-      enable = true;
-      enableContribAndExtras = true;
+	
+    desktopManager = {
+      gnome.enable = true;
     };
   };
+
+  programs.dconf.enable = true;
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome.geary
+    gnome-tour
+    gnome.totem
+    epiphany
+  ]);
 
   # Set environment.
   environment.variables = { EDITOR = "emacs"; };
 
-  # Enable qt5ct to set the qt5 theme.
-  programs.qt5ct.enable = true;
+  # Enable qt5ct.
+  # programs.qt5ct.enable = true;
 
   # Set keymap in X11.
   services.xserver.layout = "br";
@@ -204,6 +199,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luki = {
     isNormalUser = true;
+    description = "Leonardo Monteiro";
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "fuse" "scanner" "lp" "libvirtd" "kvm" ];
     shell = pkgs.fish;
   };
@@ -348,6 +344,7 @@ in
     udisks2.enable = true;
     upower.enable = true;
     gnome.gnome-keyring.enable = true;
+    power-profiles-daemon.enable = false;
   };
 
   # This value determines the NixOS release from which the default
