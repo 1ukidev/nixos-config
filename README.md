@@ -2,7 +2,7 @@
   
 # NixOS configurations
 ## Personal NixOS configurations.
-![Screenshot](screenshot.png)
+![Screenshot](nixos.png)
 
 ## System:
 | Category            | Name                          |
