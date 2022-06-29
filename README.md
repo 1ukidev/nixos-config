@@ -5,17 +5,14 @@
 ![Screenshot](screenshot.png)
 
 ## System:
-| Category       | Name                          |
-| -------------  | ----------------------------- |
-| NixOS version  | 22.05 (Quokka)                |
-| Shell          | fish                          |
-| Terminal       | kitty                         |
-| Launcher       | Rofi                          |
-| Filesystem     | Btrfs (with zstd compression) |
-| Bootloader     | systemd-boot                  |
-| Window manager | i3                            |
-| Compositor     | picom                         |
-| Notifications  | Dunst                         |
+| Category            | Name                          |
+| ------------------- | ----------------------------- |
+| NixOS version       | 22.05 (Quokka)                |
+| Shell               | fish                          |
+| Terminal            | kitty                         |
+| Filesystem          | Btrfs (with zstd compression) |
+| Bootloader          | systemd-boot                  |
+| Desktop environment | GNOME                         |
 
 ## Themes:
 | Category       | Name                          |
