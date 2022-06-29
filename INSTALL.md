@@ -88,11 +88,5 @@
 ```
 
 ```
-*Optional*
-# cd ../polybar-themes
-# ./setup.sh
-```
-
-```
 # reboot
 ```
