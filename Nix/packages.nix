@@ -32,6 +32,7 @@ in
     # Production
     audacity-gtk3
     blender
+    darktable
     kdenlive
     krita
 
@@ -165,7 +166,6 @@ in
     nix-tree
     nnn
     pipes
-    pulsemixer
     speedtest-cli
     spotdl
     tmux
@@ -177,6 +177,7 @@ in
     # Games
     chiaki
     ppsspp
+    superTuxKart
     # snes9x-gtk
     # unstable.osu-lazer
 
@@ -236,7 +237,6 @@ in
     gnupatch
     gnused
     libtool
-    mc
     pkgconf
     texinfo
     which

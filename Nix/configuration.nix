@@ -53,11 +53,6 @@ in
   # I leave it disabled only initially, due to Btrfs compression.
   nix.readOnlyStore = false;
 
-  # Set vm.swappiness to 100
-  boot.kernel.sysctl = {
-    "vm.swappiness" = 100;
-  };
-
   # Set CPU frequency.
   powerManagement = {
     enable = true;
@@ -152,9 +147,9 @@ in
   services.xserver.libinput.enable = true;
   
   # Enable support for Intel hybrid codec.
-  nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-  };
+  # nixpkgs.config.packageOverrides = pkgs: {
+  #   vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+  # };
 
   # Enable OpenGL and accelerated video playback.
   hardware.opengl = {
@@ -180,8 +175,8 @@ in
   hardware.sane.extraBackends = [ pkgs.utsushi ];
 
   # Enable Bluetooth support.
-  hardware.bluetooth.enable = false;
-  services.blueman.enable = false;
+  hardware.bluetooth.enable = true;
+  # services.blueman.enable = true;
 
   # Enable sound and PulseAudio.
   sound.enable = true;
@@ -203,6 +198,10 @@ in
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "fuse" "scanner" "lp" "libvirtd" "kvm" ];
     shell = pkgs.fish;
   };
+  
+  security.sudo.extraConfig = ''
+    Defaults pwfeedback
+  '';
   
   # Configure fish.
   programs.fish = {
@@ -251,6 +250,8 @@ in
     noto-fonts-emoji
     dejavu_fonts
     corefonts
+    source-han-sans
+    source-han-serif
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
