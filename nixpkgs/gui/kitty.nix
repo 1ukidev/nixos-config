@@ -25,7 +25,7 @@
 
       # Dracula color scheme
       foreground            #f8f8f2
-      background            #282a36
+      background            #161925
       selection_foreground  #ffffff
       selection_background  #44475a
       url_color             #8be9fd
