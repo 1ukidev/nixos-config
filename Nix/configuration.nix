@@ -12,7 +12,7 @@ in
     ./hardware-configuration.nix
     # Include the packages that will be installed.
     ./packages.nix
-    # Include home-manager
+    # Include home-manager.
     (import "${home-manager}/nixos")
   ];
 
