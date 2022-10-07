@@ -18,20 +18,18 @@ in
   environment.systemPackages = with pkgs; [
     # In alphabetic order.
     # Internet
-    brave
     element-desktop
+    firefox-bin
     ipfs
     kodi
-    qbittorrent
-    qutebrowser
     signal-desktop
     unstable.tdesktop
     # tor-browser-bundle-bin
+    transmission-gtk
     unstable.discord
 
     # Production
     audacity-gtk3
-    blender
     darktable
     kdenlive
     krita
@@ -91,7 +89,6 @@ in
     home-manager
     kitty
     linuxHeaders
-    lxqt.lxqt-sudo
     papirus-icon-theme
     pciutils
     ripgrep
