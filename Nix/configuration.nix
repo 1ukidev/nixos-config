@@ -157,11 +157,9 @@ in
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-      intel-media-driver
       libva
+      libva-utils
       vaapiIntel
-      vaapiVdpau
-      libvdpau-va-gl
     ];
   };
 
