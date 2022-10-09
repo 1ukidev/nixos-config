@@ -54,7 +54,6 @@ in
     git
     gnumake
     go
-    google-cloud-sdk
     lldb_14
     nasm
     neovim
@@ -167,13 +166,13 @@ in
     pipes
     speedtest-cli
     spotdl
+    thefuck
     tmux
     tokei
     tree
     tty-clock
-    thefuck
-    yt-dlp
     unstable.zsh-powerlevel10k
+    yt-dlp
 
     # Games
     chiaki
@@ -207,7 +206,6 @@ in
     gvfs
     libopus
     libsForQt5.full
-    libsForQt5.qtstyleplugins
     libvorbis
     libvpx
     llvm_14
