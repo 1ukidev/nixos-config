@@ -319,22 +319,10 @@ in
     ports = [ 2222 ];
     extraConfig = ''
       MaxAuthTries 3
+      MaxSessions 3
     '';
   };
 
-  # Enable MPD.
-  # services.mpd = {
-  #   enable = true;
-  #   extraConfig = ''
-  #   audio_output {
-  #     type "pulse" # MPD must use Pulseaudio
-  #     name "PulseAudio" # Whatever you want
-  #     server "127.0.0.1" # MPD must connect to the local sound server
-  #    }
-  #  '';
-  # };
-  # programs.ncmpcpp.enable = true;
-  
   # Enable the firewall.
   networking.firewall.enable = true;
 
@@ -347,6 +335,7 @@ in
     fstrim.enable = true;
     udisks2.enable = true;
     upower.enable = true;
+    cron.enable = true;
     syncthing = {
       enable = true;
       user = "luki";
