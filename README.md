@@ -1,7 +1,6 @@
 <div align="center">
   
 # NixOS configurations
-## Personal NixOS configurations.
 ![Screenshot](nixos.png)
 
 ## System:
