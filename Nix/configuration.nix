@@ -194,27 +194,37 @@ in
     isNormalUser = true;
     description = "Leonardo Monteiro";
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "fuse" "scanner" "lp" "libvirtd" "kvm" ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
   
   security.sudo.extraConfig = ''
     Defaults pwfeedback
   '';
-  
-  # Configure fish.
-  programs.fish = {
+
+  # Configure zsh.
+  programs.zsh = {
     enable = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh = {
+      enable = true;
+      plugins = [ "git" "thefuck" ];
+    };
+
+    promptInit = ''
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+    '';
+
     shellAliases = {
       sysrs = "sudo nixos-rebuild switch";
       sysup = "sudo nixos-rebuild switch --upgrade";
       sysrsgit = "sysrs -I nixpkgs=/home/$USER/nixpkgs";
       sysupgit = "sysup -I nixpkgs=/home/$USER/nixpkgs";
-      sysclean = "sudo nix-collect-garbage -d; and sudo nix-store --optimise";
+      sysclean = "sudo nix-collect-garbage -d; sudo nix-store --optimise";
       homers = "home-manager switch";
       search = "nix search";
       nixconfig = "sudo nvim /etc/nixos/configuration.nix";
-      lgit = "git add .; and git commit; and git push";
-      lgitf = "git add .; and git commit; and git pull; and git push";
+      lgit = "git add .; git commit; git push";
+      lgitf = "git add .; git commit; git pull; git push";
       ga = "git add .";
       gp = "git pull";
       ls = "exa --icons";
@@ -232,15 +242,10 @@ in
       de = "distrobox-enter";
       ds = "distrobox-stop";
     };
-
-    shellInit = ''
-      # Remove welcome message.
-      set fish_greeting ""
-    '';
   };
 
   # Change root shell.
-  users.users.root = { shell = pkgs.fish; };
+  users.users.root = { shell = pkgs.zsh; };
 
   # Install fonts.
   fonts.fonts = with pkgs; [
@@ -267,7 +272,7 @@ in
       ];
       
       sansSerif = [ 
-        "Noto Sans"
+        "Noto Sans Display"
         "Noto Color Emoji"
         "Noto Emoji"
         "DejaVu Sans" 
@@ -342,6 +347,12 @@ in
     fstrim.enable = true;
     udisks2.enable = true;
     upower.enable = true;
+    syncthing = {
+      enable = true;
+      user = "luki";
+      dataDir = "/home/luki";
+      openDefaultPorts = true;
+    };
     gnome.gnome-keyring.enable = true;
     power-profiles-daemon.enable = false;
   };
@@ -353,5 +364,4 @@ in
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
-
 }

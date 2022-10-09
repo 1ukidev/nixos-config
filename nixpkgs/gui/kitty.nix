@@ -5,7 +5,7 @@
 
       # Font
       font_family      monospace
-      font_size        9.0
+      font_size        10.0
       bold_font        auto
       italic_font      auto
       bold_italic_font auto
@@ -25,7 +25,7 @@
 
       # Dracula color scheme
       foreground            #f8f8f2
-      background            #161925
+      background            #000000
       selection_foreground  #ffffff
       selection_background  #44475a
       url_color             #8be9fd

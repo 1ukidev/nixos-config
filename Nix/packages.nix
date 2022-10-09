@@ -108,10 +108,10 @@ in
     gnomeExtensions.openweather
 
     # Video, audio and recording
-    cmus
     ffmpeg
     mpv
     simplescreenrecorder
+    stremio
     vlc
 
     # Extras
@@ -122,7 +122,6 @@ in
     cron
     fd
     flex
-    hakuneko
     hdparm
     keynav
     killall
@@ -131,6 +130,8 @@ in
     lolcat
     scrcpy
     sct
+    syncthing
+    tailscale
     tldr
     unstable.betterdiscordctl
     vulkan-tools
@@ -161,6 +162,7 @@ in
     ncdu
     neofetch
     nix-tree
+    nixos-option
     nnn
     pipes
     speedtest-cli
@@ -169,7 +171,9 @@ in
     tokei
     tree
     tty-clock
+    thefuck
     yt-dlp
+    unstable.zsh-powerlevel10k
 
     # Games
     chiaki
@@ -207,7 +211,6 @@ in
     libvorbis
     libvpx
     llvm_14
-    python39Packages.pygame
     x264
     x265
    
