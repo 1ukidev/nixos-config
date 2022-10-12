@@ -178,6 +178,7 @@ in
     chiaki
     ppsspp
     superTuxKart
+    steam
     # snes9x-gtk
     # unstable.osu-lazer
 
