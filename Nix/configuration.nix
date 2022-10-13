@@ -344,6 +344,7 @@ in
       openDefaultPorts = true;
     };
     tailscale.enable = true;
+    nginx.enable = true;
     gnome.gnome-keyring.enable = true;
     power-profiles-daemon.enable = false;
   };
