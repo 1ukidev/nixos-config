@@ -329,7 +329,7 @@ in
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 2222 631 41641 ];
-  networking.firewall.allowedUDPPorts = [ 2222 631 41641];
+  networking.firewall.allowedUDPPorts = [ 2222 631 41641 ];
   
   # Others services.
   services = {
