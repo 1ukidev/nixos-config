@@ -1,6 +1,6 @@
 # NixOS 22.05 config - 1ukidev
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz";
@@ -20,8 +20,17 @@ in
   nixpkgs.config.allowUnfree = true;
 
   # Allow "wheel" on nix.
-  nix.allowedUsers = [ "@wheel" ];
-  nix.trustedUsers = [ "@wheel" ];
+  nix = {
+    allowedUsers = [ "@wheel" ];
+    trustedUsers = [ "@wheel" ];
+  };
+  
+  # Allow experimental features on nix.
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = lib.optionalString (config.nix.package == pkgs.nixFlakes)
+      "experimental-features = nix-command flakes";
+  };
 
   # Use zen kernel.
   boot.kernelPackages = pkgs.linuxPackages_zen;
