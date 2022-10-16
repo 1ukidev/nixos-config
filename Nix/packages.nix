@@ -122,7 +122,6 @@ in
     fd
     flex
     hdparm
-    keynav
     killall
     linuxKernel.packages.linux_zen.cpupower
     lm_sensors
@@ -133,11 +132,11 @@ in
     tailscale
     tldr
     unstable.betterdiscordctl
+    unstable.warpd
     vulkan-tools
     winetricks
     wineWowPackages.full
     wirelesstools
-    xbanish
     xcolor
     xdg-launch
     xdg_utils
@@ -149,7 +148,6 @@ in
     # CLI/TUI tools and some useless packages
     btop
     btrfs-progs
-    cava
     cmatrix
     compsize
     cpufetch
