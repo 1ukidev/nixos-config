@@ -84,7 +84,6 @@ in
     exfatprogs
     flameshot
     fuse
-    gnome.gnome-tweaks
     home-manager
     kitty
     linuxHeaders
@@ -96,15 +95,6 @@ in
     upower
     utillinux
     xorg.xhost
-
-    # Gnome extensions
-    gnomeExtensions.appindicator
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.alphabetical-app-grid
-    gnomeExtensions.sound-output-device-chooser
-    gnomeExtensions.caffeine
-    gnomeExtensions.places-status-indicator
-    gnomeExtensions.openweather
 
     # Video, audio and recording
     ffmpeg

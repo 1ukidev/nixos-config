@@ -125,21 +125,13 @@ in
   services.xserver = {
     enable = true;
     displayManager = {
-      gdm.enable = true;
+      sddm.enable = true;
     };
 	
     desktopManager = {
-      gnome.enable = true;
+      plasma5.enable = true;
     };
   };
-
-  programs.dconf.enable = true;
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome.geary
-    gnome-tour
-    gnome.totem
-    epiphany
-  ]);
 
   # Set environment.
   environment.variables = { EDITOR = "emacs"; };
@@ -354,8 +346,6 @@ in
     };
     tailscale.enable = true;
     nginx.enable = true;
-    gnome.gnome-keyring.enable = true;
-    power-profiles-daemon.enable = false;
   };
 
   # This value determines the NixOS release from which the default

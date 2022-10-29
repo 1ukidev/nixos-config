@@ -11,13 +11,13 @@
 | Terminal            | kitty                         |
 | Filesystem          | Btrfs (with zstd compression) |
 | Bootloader          | systemd-boot                  |
-| Desktop environment | GNOME                         |
+| Desktop environment | KDE Plasma                    |
 
 ## Themes:
 | Category       | Name                          |
 | -------------  | ----------------------------- |
-| GTK Theme      | Dracula                       |
-| GTK Icon theme | Papirus                       |
+| Theme          | Dracula                       |
+| Icon theme     | Papirus                       |
 | Terminal font  | JetBrains Mono Nerd Font      |
   
 ---
