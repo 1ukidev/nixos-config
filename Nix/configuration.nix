@@ -146,7 +146,7 @@ in
 
   # Enable drivers in X11.
   services.xserver.videoDrivers = [ "modesetting" ];
-  services.xserver.useGlamor = true;
+  # services.xserver.useGlamor = true;
   services.xserver.libinput.enable = true;
   
   # Enable support for Intel hybrid codec.
@@ -294,9 +294,8 @@ in
   nixpkgs.config.permittedInsecurePackages = [ "ffmpeg-4.4.1" ];
 
   # Enable VirtualBox and libvird.
-  # virtualisation.virtualbox.host.enable = true;
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
-  # users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
   virtualisation.libvirtd.enable = false;
  
   # Enable podman

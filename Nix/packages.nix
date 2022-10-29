@@ -57,7 +57,7 @@ in
     lldb_14
     nasm
     neovim
-    ngrok
+    # ngrok
     ninja
     nodejs-16_x
     nodePackages.npm
@@ -68,7 +68,7 @@ in
     rustc
     scenebuilder
     shc
-    unstable.vscode
+    unstable.vscodium
     yarn
 
     # System
@@ -143,6 +143,7 @@ in
     elinks
     figlet
     htop
+    libva-utils
     intel-gpu-tools
     iotop
     ncdu
@@ -150,6 +151,7 @@ in
     nix-tree
     nixos-option
     nnn
+    onefetch
     pipes
     speedtest-cli
     spotdl
@@ -167,6 +169,7 @@ in
     superTuxKart
     steam
     # snes9x-gtk
+    duckstation
     # unstable.osu-lazer
 
     # Text
@@ -185,7 +188,6 @@ in
     wireshark
 
     # Virtualization
-    gnome.gnome-boxes
     qemu
     qemu-utils
  
