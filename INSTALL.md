@@ -53,9 +53,9 @@
 
 ### Download my configuration
 ```
-# curl -L -O https://github.com/1ukidev/nixos-config/archive/gnome.tar.gz
-# tar xf gnome.tar.gz
-# cd nixos-config-gnome/Nix
+# curl -L -O https://github.com/1ukidev/nixos-config/archive/kde.tar.gz
+# tar xf kde.tar.gz
+# cd nixos-config-kde/Nix
 # cp * /mnt/etc/nixos
 ```
 
