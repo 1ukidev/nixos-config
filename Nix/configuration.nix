@@ -133,6 +133,8 @@ in
     };
   };
 
+  programs.dconf.enable = true;
+
   # Set environment.
   environment.variables = { EDITOR = "emacs"; };
 
