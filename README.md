@@ -1,7 +1,7 @@
 <div align="center">
   
 # NixOS configurations
-![Screenshot](nixos.png)
+![Screenshot](screenshot.png)
 
 ## System:
 | Category            | Name                          |
