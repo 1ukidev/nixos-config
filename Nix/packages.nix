@@ -85,7 +85,6 @@ in
     flameshot
     fuse
     home-manager
-    kitty
     linuxHeaders
     papirus-icon-theme
     pciutils

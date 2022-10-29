@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./gui/kitty.nix
-  ];
-
   home.username = "luki";
   home.homeDirectory = "/home/luki";
   home.stateVersion = "22.05";
@@ -25,5 +21,4 @@
       interactive.diffFilter = "diff-so-fancy --patch";
     };
   };
-
 }
