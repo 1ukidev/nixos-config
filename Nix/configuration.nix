@@ -334,7 +334,6 @@ in
   
   # Others services.
   services = {
-    fstrim.enable = true;
     udisks2.enable = true;
     upower.enable = true;
     cron.enable = true;
