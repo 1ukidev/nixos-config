@@ -244,6 +244,7 @@ in
       e = "emacs -nw";
       de = "distrobox-enter";
       ds = "distrobox-stop";
+      docker = "podman";
     };
   };
 

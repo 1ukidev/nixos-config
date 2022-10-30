@@ -9,6 +9,18 @@
   home.homeDirectory = "/home/luki";
   home.stateVersion = "22.05";
 
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "instance" = {
+        hostname = "193.123.121.240";
+        user = "ubuntu";
+        identityFile = "~/Documentos/Outros/ssh-key-2022-10-16.key";
+        forwardX11 = true;
+      };
+    };
+  };
+
   programs.git = {
     enable = true;
     package = pkgs.gitFull;

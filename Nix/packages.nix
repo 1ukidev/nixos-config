@@ -202,7 +202,6 @@ in
     libvorbis
     libvpx
     llvm_14
-    python39Packages.dbus-python
     x264
     x265
    
