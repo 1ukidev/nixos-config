@@ -18,6 +18,7 @@ in
   environment.systemPackages = with pkgs; [
     # In alphabetic order.
     # Internet
+    chromium
     element-desktop
     firefox-bin
     ipfs
@@ -85,6 +86,7 @@ in
     flameshot
     fuse
     home-manager
+    kitty
     linuxHeaders
     papirus-icon-theme
     pciutils
@@ -196,9 +198,11 @@ in
     gvfs
     libopus
     libsForQt5.full
+    libsForQt5.sddm-kcm
     libvorbis
     libvpx
     llvm_14
+    python39Packages.dbus-python
     x264
     x265
    
