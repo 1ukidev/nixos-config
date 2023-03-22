@@ -11,7 +11,7 @@
       bold_italic_font auto
 
       # Transparency
-      background_opacity 0.90
+      background_opacity 0.95
 
       # Padding
       window_padding_width 12
@@ -25,7 +25,7 @@
 
       # Dracula color scheme
       foreground            #f8f8f2
-      background            #1e1f29
+      background            #0c0c0c
       selection_foreground  #ffffff
       selection_background  #44475a
       url_color             #8be9fd

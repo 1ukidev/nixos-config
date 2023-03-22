@@ -1,9 +1,9 @@
-# NixOS 22.05 config - 1ukidev
+# NixOS 22.11 config - 1ukidev
 
 { config, pkgs, lib, ... }:
 
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
 in
 
 {
@@ -20,9 +20,9 @@ in
   nixpkgs.config.allowUnfree = true;
 
   # Allow "wheel" on nix.
-  nix = {
-    allowedUsers = [ "@wheel" ];
-    trustedUsers = [ "@wheel" ];
+  nix.settings = {
+    allowed-users = [ "@wheel" ];
+    trusted-users = [ "@wheel" ];
   };
   
   # Allow experimental features on nix.
@@ -70,18 +70,18 @@ in
   };
   
   services.tlp = {
-    enable = true;
+    enable = false;
     settings = {
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "performance";
-      CPU_SCALING_MIN_FREQ_ON_AC = 2700000;
-      CPU_SCALING_MAX_FREQ_ON_AC = 2700000;
-      CPU_SCALING_MIN_FREQ_ON_BAT = 2700000;
-      CPU_SCALING_MAX_FREQ_ON_BAT = 2700000;
+      CPU_SCALING_MIN_FREQ_ON_AC = 4100000;
+      CPU_SCALING_MAX_FREQ_ON_AC = 4100000;
+      CPU_SCALING_MIN_FREQ_ON_BAT = 4100000;
+      CPU_SCALING_MAX_FREQ_ON_BAT = 4100000;
     };
   };
   
-  boot.kernelParams = [ "intel_pstate=disable" "mitigations=off" ];
+  #boot.kernelParams = [ "intel_pstate=disable" ];
   
   # Use systemd-boot.
   boot.loader = {
@@ -101,8 +101,8 @@ in
   networking.networkmanager.enable = true; # Enable NetworkManager.
 
   # Define DNS.
-  networking.networkmanager.insertNameservers = [ "1.1.1.1" "1.0.0.1" ];
-  networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
+  #networking.networkmanager.insertNameservers = [ "1.1.1.1" "1.0.0.1" ];
+  #networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
 
   # Set your time zone.
   time.timeZone = "America/Fortaleza";
@@ -162,7 +162,7 @@ in
     extraPackages = with pkgs; [
       libva
       libva-utils
-      vaapiIntel
+      intel-media-driver
     ];
   };
 
@@ -292,7 +292,7 @@ in
   };
 
   # Allow ffmpeg installation.
-  nixpkgs.config.permittedInsecurePackages = [ "ffmpeg-4.4.1" ];
+  nixpkgs.config.permittedInsecurePackages = [ "ffmpeg-4.4.1" "qtwebkit-5.212.0-alpha4" ];
 
   # Enable VirtualBox and libvird.
   virtualisation.virtualbox.host.enable = true;
@@ -355,5 +355,5 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.05"; # Did you read the comment?
+  system.stateVersion = "22.11"; # Did you read the comment?
 }

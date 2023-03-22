@@ -1,4 +1,4 @@
-# NixOS 22.05 packages - 1ukidev
+# NixOS 22.11 packages - 1ukidev
 
 { config, pkgs, ... }:
 
@@ -18,9 +18,8 @@ in
   environment.systemPackages = with pkgs; [
     # In alphabetic order.
     # Internet
-    chromium
-    element-desktop
     firefox-bin
+    google-chrome
     ipfs
     kodi
     signal-desktop
@@ -30,7 +29,7 @@ in
     unstable.discord
 
     # Production
-    audacity-gtk3
+    audacity
     darktable
     kdenlive
     krita
@@ -166,7 +165,6 @@ in
     yt-dlp
 
     # Games
-    chiaki
     ppsspp
     superTuxKart
     steam
