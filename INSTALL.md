@@ -22,7 +22,7 @@
 # wipefs -a /dev/sdX
 # cfdisk -z /dev/sdX
 # mkfs.fat -nEFI -F32 /dev/sdXX
-# mkfs.btrfs -f -L ROOT /dev/sdXX
+# mkfs.btrfs -f -L ROOT --csum xxhash /dev/sdXX
 # mkswap -L SWAP /dev/sdXX
 ```
 
