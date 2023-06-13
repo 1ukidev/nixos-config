@@ -1,4 +1,4 @@
-# NixOS 22.11 packages - 1ukidev
+# NixOS 23.05 packages - 1ukidev
 
 { config, pkgs, ... }:
 
@@ -35,12 +35,10 @@ in
     krita
 
     # Development
-    adoptopenjdk-bin
-    adoptopenjdk-jre-bin
+    temurin-jre-bin
+    temurin-bin
     android-studio
-    cabal-install
     cargo
-    clang_14
     cmake
     distrobox
     diff-so-fancy
@@ -49,21 +47,16 @@ in
     gcc12
     gdb
     gh
-    ghc
     ghidra-bin
     git
     gnumake
-    go
-    lldb_14
     nasm
     neovim
     # ngrok
     ninja
-    nodejs-16_x
+    nodejs-18_x
     nodePackages.npm
-    pypy3
-    python39Full
-    python39Packages.pip
+    python311
     qtcreator
     rustc
     scenebuilder
@@ -115,7 +108,6 @@ in
     killall
     linuxKernel.packages.linux_zen.cpupower
     lm_sensors
-    lolcat
     scrcpy
     sct
     syncthing
@@ -154,7 +146,6 @@ in
     nnn
     onefetch
     pipes
-    speedtest-cli
     spotdl
     thefuck
     tmux
@@ -199,7 +190,6 @@ in
     libsForQt5.sddm-kcm
     libvorbis
     libvpx
-    llvm_14
     x264
     x265
    
