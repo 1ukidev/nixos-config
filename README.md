@@ -6,7 +6,7 @@
 ## System:
 | Category            | Name                          |
 | ------------------- | ----------------------------- |
-| NixOS version       | 22.05 (Quokka)                |
+| NixOS version       | 23.05 (Stoat)                |
 | Shell               | fish                          |
 | Terminal            | kitty                         |
 | Filesystem          | Btrfs (with zstd compression) |
