@@ -1,4 +1,4 @@
-# NixOS 23.05 config - 1ukidev
+# NixOS 23.05 configuration - 1ukidev
 
 { config, pkgs, lib, ... }:
 
