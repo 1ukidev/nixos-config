@@ -13,7 +13,7 @@
     enable = true;
     matchBlocks = {
       "instance" = {
-        hostname = "193.123.121.240";
+        hostname = "";
         user = "luki";
       };
     };
