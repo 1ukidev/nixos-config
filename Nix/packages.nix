@@ -39,6 +39,7 @@ in
     vscodium
     diff-so-fancy
     git
+    gitui
     neovim
 
     # System
@@ -53,7 +54,7 @@ in
     fuse
     home-manager
     linuxHeaders
-    #pciutils
+    pciutils
     ripgrep
     srm
     udisks
@@ -152,7 +153,6 @@ in
     glibc
     gvfs
     libopus
-    #libsForQt5.full
     libsForQt5.sddm-kcm
     libvorbis
     libvpx
