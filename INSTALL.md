@@ -1,4 +1,4 @@
-## Unencrypted / Optimized for SSD
+## Unencrypted / Optimized for SSD NVMe
 ## Installation:
 ### Become superuser
 ```
