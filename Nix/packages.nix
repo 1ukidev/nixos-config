@@ -20,12 +20,12 @@ in
     # Internet
     firefox-bin
     google-chrome
+    #tor-browser-bundle-bin
     ipfs
     kodi
-    signal-desktop
+    unstable.signal-desktop
     unstable.tdesktop
-    # tor-browser-bundle-bin
-    transmission-gtk
+    unstable.transmission-gtk
     unstable.discord
 
     # Production
@@ -35,53 +35,25 @@ in
     krita
 
     # Development
-    temurin-jre-bin
-    temurin-bin
-    android-studio
-    cargo
-    cmake
-    distrobox
+    emacs
+    vscodium
     diff-so-fancy
-    unstable.emacs
-    fritzing
-    gcc12
-    gdb
-    gh
-    ghidra-bin
     git
-    gnumake
-    nasm
     neovim
-    # ngrok
-    ninja
-    nodejs-18_x
-    nodePackages.npm
-    python311
-    qtcreator
-    rustc
-    scenebuilder
-    shc
-    unstable.vscodium
-    yarn
 
     # System
     aria
     bat
-    coreutils-full
     curl
     dosfstools
-    dracula-theme
     duf
     exa
     exfat
     exfatprogs
-    flameshot
     fuse
     home-manager
-    kitty
     linuxHeaders
-    papirus-icon-theme
-    pciutils
+    #pciutils
     ripgrep
     srm
     udisks
@@ -104,7 +76,6 @@ in
     cron
     fd
     flex
-    hdparm
     killall
     linuxKernel.packages.linux_zen.cpupower
     lm_sensors
@@ -115,15 +86,14 @@ in
     tldr
     unstable.betterdiscordctl
     unstable.warpd
-    vulkan-tools
     winetricks
     wineWowPackages.full
     wirelesstools
+    xbanish
     xcolor
     xdg-launch
     xdg_utils
     xdg-user-dirs
-    xonsh
     xorg.xkill
     xsane
 
@@ -132,8 +102,6 @@ in
     btrfs-progs
     cmatrix
     compsize
-    cpufetch
-    elinks
     figlet
     htop
     libva-utils
@@ -143,7 +111,6 @@ in
     neofetch
     nix-tree
     nixos-option
-    nnn
     onefetch
     pipes
     spotdl
@@ -157,25 +124,24 @@ in
 
     # Games
     ppsspp
-    superTuxKart
+    #superTuxKart
     steam
-    # snes9x-gtk
+    #snes9x-gtk
     duckstation
-    # unstable.osu-lazer
+    #unstable.osu-lazer
 
     # Text
     libreoffice-fresh
-    pandoc
+    unstable.pandoc
     unstable.groff
     unstable.obsidian
 
     # Security and clean
     bleachbit
-    chkrootkit
     dig
     nmap
     protonvpn-cli
-    # veracrypt
+    #veracrypt
     wireshark
 
     # Virtualization
@@ -186,7 +152,7 @@ in
     glibc
     gvfs
     libopus
-    libsForQt5.full
+    #libsForQt5.full
     libsForQt5.sddm-kcm
     libvorbis
     libvpx
@@ -201,23 +167,8 @@ in
     xz
     zstd
 
-    # Others GNU tools (unnecessary?)
-    autoconf
-    automake
+    # Others GNU tools
     bc
-    binutils
-    bison
-    fakeroot
     file
-    findutils
-    gawk
-    gettext
-    gnum4
-    gnupatch
-    gnused
-    libtool
-    pkgconf
-    texinfo
-    which
   ];
 }

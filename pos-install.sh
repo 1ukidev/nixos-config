@@ -2,17 +2,19 @@
 # Shell script to run some important tasks
 set -e
 
-# Move wallpaper to ~/Pictures/Wallpapers
-#mkdir -p $HOME/Pictures/Wallpapers
-#cp Wallpaper/1.png $HOME/Pictures/Wallpapers
+# Move wallpaper to ~/Imagens/Wallpapers
 mkdir -p $HOME/Imagens/Wallpapers
 cp Wallpaper/1.png $HOME/Imagens/Wallpapers
 
+# Add home-manager channel
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
+
 # Update Nix channel
 sudo nix-channel --update
+nix-channel --update
 
 # Setup home-manager
-cp -r nixpkgs $HOME/.config/
+cp -r home-manager $HOME/.config/
 home-manager switch
 
 # Clean system

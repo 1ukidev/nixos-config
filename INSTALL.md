@@ -19,31 +19,31 @@
 
 ### Partition disk
 ```
-# wipefs -a /dev/sdX
-# cfdisk -z /dev/sdX
-# mkfs.fat -nEFI -F32 /dev/sdXX
-# mkfs.btrfs -f -L ROOT --csum xxhash /dev/sdXX
-# mkswap -L SWAP /dev/sdXX
+# wipefs -a /dev/nvme0n1pX
+# cfdisk -z /dev/nvme0n1pX
+# mkfs.fat -nEFI -F32 /dev/nvme0n1pX
+# mkfs.btrfs -f -L ROOT --csum xxhash /dev/nvme0n1pX
+# mkswap -L SWAP /dev/nvme0n1pX
 ```
 
 ### Mount partitions
 ```
-# swapon /dev/sdXX
+# swapon /dev/nvme0n1pX
 # BTRFS_OPTS="noatime,space_cache=v2,autodefrag,discard=async,compress=zstd"
-# mount -o $BTRFS_OPTS /dev/sdXX /mnt
+# mount -o $BTRFS_OPTS /dev/nvme0n1pX /mnt
 # btrfs subvolume create /mnt/@
 # btrfs subvolume create /mnt/@home
 # btrfs subvolume create /mnt/@nix
 # btrfs subvolume create /mnt/@var
 # btrfs subvolume create /mnt/@tmp
 # umount /mnt
-# mount -o subvol=@,$BTRFS_OPTS /dev/sdXX /mnt
+# mount -o subvol=@,$BTRFS_OPTS /dev/nvme0n1pX /mnt
 # mkdir -p /mnt/{home,nix,var,tmp,boot/efi}
-# mount -o subvol=@home,$BTRFS_OPTS /dev/sdXX /mnt/home
-# mount -o subvol=@nix,$BTRFS_OPTS /dev/sdXX /mnt/nix
-# mount -o subvol=@var,$BTRFS_OPTS /dev/sdXX /mnt/var
-# mount -o subvol=@tmp,$BTRFS_OPTS /dev/sdXX /mnt/tmp
-# mount -o noatime /dev/sdXX /mnt/boot/efi
+# mount -o subvol=@home,$BTRFS_OPTS /dev/nvme0n1pX /mnt/home
+# mount -o subvol=@nix,$BTRFS_OPTS /dev/nvme0n1pX /mnt/nix
+# mount -o subvol=@var,$BTRFS_OPTS /dev/nvme0n1pX /mnt/var
+# mount -o subvol=@tmp,$BTRFS_OPTS /dev/nvme0n1pX /mnt/tmp
+# mount -o noatime /dev/nvme0n1pX /mnt/boot/efi
 ```
 
 ### Generate configuration
@@ -53,7 +53,7 @@
 
 ### Download my configuration
 ```
-# curl -L -O https://github.com/1ukidev/nixos-config/archive/kde.tar.gz
+# curl -LO https://github.com/1ukidev/nixos-config/archive/kde.tar.gz
 # tar xf kde.tar.gz
 # cd nixos-config-kde/Nix
 # cp * /mnt/etc/nixos
@@ -80,8 +80,7 @@
 ### Run ./pos-install.sh
 ```
 *Login with your user*
-*Super+Return*
-*Enable Wi-Fi with nmtui if necessary*
+*Open terminal*
 # git clone https://github.com/1ukidev/nixos-config
 # cd nixos-config
 # ./pos-install.sh

@@ -2,18 +2,12 @@
 
 { config, pkgs, lib, ... }:
 
-let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz";
-in
-
 {
   imports = [ 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     # Include the packages that will be installed.
     ./packages.nix
-    # Include home-manager.
-    (import "${home-manager}/nixos")
   ];
 
   # Enable unfree packages.
@@ -60,7 +54,7 @@ in
   # by making /nix/store a read-only bind mount.
   # Nix will automatically make the store writable when needed.
   # I leave it disabled only initially, due to Btrfs compression.
-  nix.readOnlyStore = false;
+  boot.readOnlyNixStore = false;
 
   # Set CPU frequency.
   powerManagement = {
@@ -121,7 +115,7 @@ in
     keyMap = "br-abnt2";
   };
 
-  # Enable GDM and GNOME.
+  # Enable SDDM and KDE Plasma.
   services.xserver = {
     enable = true;
     displayManager = {
@@ -185,6 +179,7 @@ in
     enable = true;
     support32Bit = true;
     package = pkgs.pulseaudioFull;
+
     # Reduce microphone noise.
     extraConfig = ''
       load-module module-echo-cancel aec_args="analog_gain_control=0 digital_gain_control=0" source_name=noiseless
@@ -239,9 +234,8 @@ in
       cgrep = "/run/current-system/sw/bin/grep";
       rmf = "sudo rm -rf";
       cp = "cp -i";
-      cat = "bat --theme Dracula";
-      less = "bat --theme Dracula";
-      e = "emacs -nw";
+      cat = "bat --theme gruvbox-dark";
+      less = "bat --theme gruvbox-dark";
       de = "distrobox-enter";
       ds = "distrobox-stop";
       docker = "podman";
@@ -276,7 +270,7 @@ in
       ];
       
       sansSerif = [ 
-        "Noto Sans Display"
+        "Noto Sans"
         "Noto Color Emoji"
         "Noto Emoji"
         "DejaVu Sans" 
@@ -313,12 +307,12 @@ in
     enableSSHSupport = true;
   };
 
-  # List services that you want to enable:
+  ## List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = false;
-    permitRootLogin = "no";
+    settings.permitRootLogin = "no";
     ports = [ 2222 ];
     extraConfig = ''
       MaxAuthTries 3
@@ -346,8 +340,10 @@ in
       openDefaultPorts = true;
     };
     tailscale.enable = true;
-    nginx.enable = true;
+    fstrim.enable = true;
   };
+
+  systemd.oomd.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

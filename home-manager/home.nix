@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./gui/kitty.nix
-  ];
-
   home.username = "luki";
   home.homeDirectory = "/home/luki";
   home.stateVersion = "23.05";

@@ -1,14 +1,14 @@
 <div align="center">
   
 # NixOS configurations
-![Screenshot](screenshot.png)
+![Screenshot](nixos.png)
 
 ## System:
 | Category            | Name                          |
 | ------------------- | ----------------------------- |
-| NixOS version       | 23.05 (Stoat)                |
-| Shell               | fish                          |
-| Terminal            | kitty                         |
+| NixOS version       | 23.05 (Stoat)                 |
+| Shell               | zsh                           |
+| Terminal            | Konsole                       |
 | Filesystem          | Btrfs (with zstd compression) |
 | Bootloader          | systemd-boot                  |
 | Desktop environment | KDE Plasma                    |
@@ -16,8 +16,8 @@
 ## Themes:
 | Category       | Name                          |
 | -------------  | ----------------------------- |
-| Theme          | Dracula                       |
-| Icon theme     | Papirus                       |
+| Theme          | Gruvbox                       |
+| Icon theme     | Gruvbox Plus                  |
 | Terminal font  | JetBrains Mono Nerd Font      |
   
 ---
