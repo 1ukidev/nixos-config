@@ -239,6 +239,7 @@
       de = "distrobox-enter";
       ds = "distrobox-stop";
       docker = "podman";
+      nix-shell = "nix-shell --command 'zsh'";
     };
   };
 
@@ -338,6 +339,10 @@
       user = "luki";
       dataDir = "/home/luki";
       openDefaultPorts = true;
+    };
+    mysql = {
+      enable = true;
+      package = pkgs.mariadb;
     };
     tailscale.enable = true;
     fstrim.enable = true;

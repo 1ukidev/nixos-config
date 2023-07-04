@@ -25,7 +25,7 @@ in
     kodi
     unstable.signal-desktop
     unstable.tdesktop
-    unstable.transmission-gtk
+    unstable.transmission-qt
     unstable.discord
 
     # Production
@@ -41,6 +41,7 @@ in
     git
     gitui
     neovim
+    fritzing
 
     # System
     aria
@@ -150,8 +151,6 @@ in
     qemu-utils
  
     # Libs
-    glibc
-    gvfs
     libopus
     libsForQt5.sddm-kcm
     libvorbis
