@@ -2,6 +2,9 @@
 # Shell script to run some important tasks
 set -e
 
+# Create xdg dirs
+xdg-user-dirs-update
+
 # Move wallpaper to ~/Imagens/Wallpapers
 mkdir -p $HOME/Imagens/Wallpapers
 cp Wallpaper/"NixOS (by lunik1).png" $HOME/Imagens/Wallpapers
