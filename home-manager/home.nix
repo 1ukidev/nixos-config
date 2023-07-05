@@ -9,8 +9,12 @@
     enable = true;
     matchBlocks = {
       "instance" = {
-        hostname = "";
+        hostname = "local.casa";
         user = "luki";
+      };
+      "minecraft-server" = {
+        hostname = "minecraft";
+        user = "ubuntu";
       };
     };
   };
@@ -18,7 +22,7 @@
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
-    userName  = "LuKi / Leonardo";
+    userName  = "Leonardo Monteiro";
     userEmail = "leo.monteiro06@live.com";
 
     extraConfig = {

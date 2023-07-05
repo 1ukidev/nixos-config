@@ -42,6 +42,7 @@ in
     gitui
     neovim
     fritzing
+    distrobox
 
     # System
     aria

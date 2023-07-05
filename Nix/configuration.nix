@@ -108,6 +108,11 @@
   networking.interfaces.eno1.useDHCP = true;
   networking.interfaces.wlo1.useDHCP = true;
 
+  networking.extraHosts = ''
+    # -- local.casa   
+    # -- minecraft
+  '';
+
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";
   console = {
@@ -345,6 +350,7 @@
       package = pkgs.mariadb;
     };
     tailscale.enable = true;
+    flatpak.enable = true;
     fstrim.enable = true;
   };
 
