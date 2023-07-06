@@ -245,6 +245,7 @@
       ds = "distrobox-stop";
       docker = "podman";
       nix-shell = "nix-shell --command 'zsh'";
+      e = "emacs -nw";
     };
   };
 
