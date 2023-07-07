@@ -16,7 +16,8 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # In alphabetic order.
+    # In alphabetic order
+    
     # Internet
     firefox-bin
     google-chrome
@@ -61,7 +62,6 @@ in
     srm
     udisks
     upower
-    utillinux
     xorg.xhost
 
     # Video, audio and recording
@@ -139,7 +139,7 @@ in
     unstable.groff
     unstable.obsidian
 
-    # Security and clean
+    # Security and cleaning tools
     bleachbit
     dig
     nmap
