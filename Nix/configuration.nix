@@ -76,7 +76,12 @@
   };
   
   #boot.kernelParams = [ "intel_pstate=disable" ];
-  
+ 
+  # Disable webcam
+  boot.extraModprobeConfig = ''
+    blacklist uvcvideo
+  '';
+
   # Use systemd-boot.
   boot.loader = {
     timeout = 1;
