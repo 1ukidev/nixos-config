@@ -345,19 +345,21 @@
     udisks2.enable = true;
     upower.enable = true;
     cron.enable = true;
+    tailscale.enable = true;
+    flatpak.enable = true;
+    fstrim.enable = true;
+    
     syncthing = {
       enable = true;
       user = "luki";
       dataDir = "/home/luki";
       openDefaultPorts = true;
     };
+    
     mysql = {
       enable = true;
       package = pkgs.mariadb;
     };
-    tailscale.enable = true;
-    flatpak.enable = true;
-    fstrim.enable = true;
   };
 
   systemd.oomd.enable = true;
