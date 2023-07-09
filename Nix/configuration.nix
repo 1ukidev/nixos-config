@@ -129,7 +129,8 @@
   services.xserver = {
     enable = true;
     displayManager = {
-      sddm.enable = true;
+      #sddm.enable = true;
+      gdm.enable = true;
     };
 	
     desktopManager = {

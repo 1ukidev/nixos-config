@@ -153,7 +153,6 @@ in
  
     # Libs
     libopus
-    libsForQt5.sddm-kcm
     libvorbis
     libvpx
     x264
