@@ -141,7 +141,7 @@
   programs.dconf.enable = true;
 
   # Set environment.
-  environment.variables = { EDITOR = "emacs"; };
+  environment.variables = { EDITOR = "emacs"; LIBVA_DRI3_DISABLE = "1"; };
 
   # Enable qt5ct.
   # programs.qt5ct.enable = true;

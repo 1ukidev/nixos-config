@@ -19,14 +19,19 @@ in
     # In alphabetic order
     
     # Internet
-    firefox-bin
-    google-chrome
+    (vivaldi.override {
+      commandLineArgs = [
+        "--force-dark-mode"
+        "--disable-features=UseChromeOSDirectVideoDecoder"
+        "--enable-features=VaapiVideoDecoder,VaapiIgnoreDriverChecks"  
+      ];
+    })
     #tor-browser-bundle-bin
     ipfs
     kodi
     unstable.signal-desktop
     unstable.tdesktop
-    unstable.transmission-qt
+    qbittorrent
     unstable.discord
 
     # Production
@@ -37,11 +42,11 @@ in
 
     # Development
     emacs
-    vscodium
+    unstable.vscode
     diff-so-fancy
     git
     gitui
-    neovim
+    unstable.neovim
     fritzing
     distrobox
 
